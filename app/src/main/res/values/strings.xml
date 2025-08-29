@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">SENA Monitoreo</string>
+    <string name="bg_image_desc">Imagen de Fondo decorativa</string>
+    <string name="logo_image_desc">Logo de la Aplicación BMIS</string>
+    <string name="plane_image_desc">Imagen de avión decorativa</string>
+    <string name="bmis_title">BMIS</string>
+    <string name="control_app">CONTROL APP</string>
+    <string name="phone_hint">Celular</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="remember_me">Recuerdame</string>
+    <string name="forget_password">¿Olvidaste tu contraseña?</string>
+    <string name="new_user_signup">¿Nuevo usuario? Regístrate</string>
+    <string name="access">Acceder</string>
+    <string name="go_back_desc">Dialog of the title the xml of sign up</string>
+    <string name="create_account_title">Vamos a crear tu cuenta</string>
+    <string name="hint_name">Nombre</string>
+    <string name="n_mero_de_celular">Número de celular</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="vuelve_a_escribir_tu_contrase_a">Vuelve a escribir tu contraseña</string>
+    <string name="accept_terms_checkbox">Aceptar</string>
+    <string name="terms_and_conditions">Términos y condiciones</string>
+    <string name="register_button">Inscribirse</string>
+    <string name="login_prompt">¿Tienes una cuenta?</string>
+    <string name="login_link">Iniciar sesión</string>
+    <string name="close">Close</string>
+    <string name="lock_icon">lock icon</string>
+    <string name="forgot_password_title">¿Has olvidado tu contraseña?</string>
+    <string name="forgot_password_instructions">No te preocupes te enviaremos instrucciones para restablecerla</string>
+    <string name="hint_phone_forgot">Ingresa tu teléfono</string>
+    <string name="reset_password">Restablecer contraseña</string>
+    <string name="back_to_login">Volver a incio de sesión</string>
 </resources>

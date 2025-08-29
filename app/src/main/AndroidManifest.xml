@@ -12,6 +12,42 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SENAMonitoreo">
         <activity
+            android:name=".ui.auth.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.common.SidebarMenuFragment"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.UserManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.AdminDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.HomeAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.AlertsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.SensorDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.HomeUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

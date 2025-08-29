@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE7D9"
+    tools:context=".ui.auth.SignupActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_green_section"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/dialog_bg_signup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/title_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginBottom="@dimen/margin_xlarge"
+                    android:fontFamily="@font/montserrat_extrabold"
+                    android:gravity="start"
+                    android:letterSpacing="-0.02"
+                    android:text="@string/create_account_title"
+                    android:textColor="@android:color/white"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/back_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:contentDescription="@string/go_back_desc"
+                    android:scaleX="-1"
+                    android:src="@drawable/img_signup_exit"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@android:color/white" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <EditText
+                android:id="@+id/edit_text_name"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:autofillHints="name"
+                android:background="@drawable/txt_rounded_corner_green"
+                android:drawableStart="@drawable/ic_user_green"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:hint="@string/hint_name"
+                android:inputType="textPersonName"
+                android:paddingStart="@dimen/padding_input"
+                android:paddingEnd="@dimen/padding_input"
+                android:textSize="@dimen/text_size_input"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/top_green_section"
+                app:layout_constraintWidth_percent="0.85"
+                tools:ignore="VisualLintTextFieldSize" />
+
+            <EditText
+                android:id="@+id/edit_text_phone"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_height"
+                android:hint="@string/n_mero_de_celular"
+                android:drawableStart="@drawable/ic_phone_green"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:background="@drawable/txt_rounded_corner_green"
+                android:paddingStart="@dimen/padding_input"
+                android:paddingEnd="@dimen/padding_input"
+                android:inputType="phone"
+                android:textSize="@dimen/text_size_input"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:autofillHints="phone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_name"
+                app:layout_constraintWidth_percent="0.85"
+                tools:ignore="VisualLintTextFieldSize" />
+
+            <EditText
+                android:id="@+id/edit_text_password"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_height"
+                android:hint="@string/contrase_a"
+                android:drawableStart="@drawable/ic_lock_green"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:background="@drawable/txt_rounded_corner_green"
+                android:paddingStart="@dimen/padding_input"
+                android:paddingEnd="@dimen/padding_input"
+                android:inputType="textPassword"
+                android:textSize="@dimen/text_size_input"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:autofillHints="password"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_phone"
+                app:layout_constraintWidth_percent="0.85"
+                tools:ignore="VisualLintTextFieldSize" />
+
+            <EditText
+                android:id="@+id/edit_text_confirm_password"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_height"
+                android:hint="@string/vuelve_a_escribir_tu_contrase_a"
+                android:drawableStart="@drawable/ic_lock_green"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:background="@drawable/txt_rounded_corner_green"
+                android:paddingStart="@dimen/padding_input"
+                android:paddingEnd="@dimen/padding_input"
+                android:inputType="textPassword"
+                android:textSize="@dimen/text_size_input"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:autofillHints="newPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_password"
+                app:layout_constraintWidth_percent="0.85"
+                tools:ignore="VisualLintTextFieldSize" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/terms_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_text_confirm_password"
+                app:layout_constraintWidth_percent="0.85">
+
+                <CheckBox
+                    android:id="@+id/checkbox_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/accept_terms_checkbox"
+                    android:textColor="@color/turquesa_apagado"
+                    android:textSize="@dimen/text_size_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_view_terms_and_conditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_xsmall"
+                    android:text="@string/terms_and_conditions"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_small"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/checkbox_terms"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox_terms"
+                    app:layout_constraintTop_toTopOf="@+id/checkbox_terms"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/button_register"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:background="@drawable/btn_border_white_bg_green"
+                android:paddingTop="@dimen/button_padding"
+                android:paddingBottom="@dimen/button_padding"
+                android:text="@string/register_button"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_button"
+                app:backgroundTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/terms_container"
+                app:layout_constraintWidth_percent="0.85"
+                tools:ignore="VisualLintButtonSize" />
+
+            <TextView
+                android:id="@+id/text_view_login_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:gravity="center"
+                android:text="@string/login_prompt"
+                android:textSize="@dimen/text_size_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/text_view_login_link"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_register" />
+
+            <TextView
+                android:id="@+id/text_view_login_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_xsmall"
+                android:text="@string/login_link"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_small"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_login_prompt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_view_login_prompt"
+                app:layout_constraintTop_toTopOf="@+id/text_view_login_prompt"
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
