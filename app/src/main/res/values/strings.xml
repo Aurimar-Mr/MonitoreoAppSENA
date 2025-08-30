@@ -29,4 +29,14 @@
     <string name="hint_phone_forgot">Ingresa tu teléfono</string>
     <string name="reset_password">Restablecer contraseña</string>
     <string name="back_to_login">Volver a incio de sesión</string>
+    <string name="lock_icon_desc">Back Arrow</string>
+    <string name="reset_password_title">Vamos a restablecer la contraseña</string>
+    <string name="hint_new_password">Contraseña</string>
+    <string name="hint_confirm_password">Contraseña</string>
+    <string name="confirm_reset_password">Restablecer</string>
+    <string name="set_new_password">Restablecer</string>
+    <string name="confirm_new_password">Confirmar contraseña</string>
+    <string name="new_password">Nuevas contraseña</string>
+    <string name="reset_password_title_final">Vamos a restablecer la contraseña</string>
+    <string name="back_arrow">Back arrow</string>
 </resources>
