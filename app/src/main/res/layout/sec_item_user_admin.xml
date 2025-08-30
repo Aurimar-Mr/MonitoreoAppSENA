@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/fondo_principal_beige">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:background="@drawable/txt_rounded_corner_green">
+
+        <ImageView
+            android:id="@+id/img_indicador_estado"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_admin_active_user"
+            android:contentDescription="@string/desc_indicador_activo" />
+
+        <TextView
+            android:id="@+id/text_nombre_usuario"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/usuario_activo"
+            android:textSize="16sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ver_usuario"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/usuario_ver"
+            android:textColor="@color/verde_azulado_profundo"
+            app:icon="@drawable/ic_admin_visibility_user"
+            app:iconTint="@color/verde_azulado_profundo"
+            app:iconGravity="textStart"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

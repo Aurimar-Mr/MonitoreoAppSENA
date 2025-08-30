@@ -11,11 +11,11 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+// settings.gradle.kts
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
-        mavenCentral()
+        mavenCentral() // ¡Asegúrate de que esta línea esté presente!
     }
 }
 
