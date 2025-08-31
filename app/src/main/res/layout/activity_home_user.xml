@@ -24,7 +24,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ImageContrastCheck" />
 
-
     <ImageView
         android:id="@+id/settings_icon"
         android:layout_width="@dimen/icon_size_l"

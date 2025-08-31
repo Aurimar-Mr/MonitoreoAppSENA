@@ -14,12 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- Imagen de fondo decorativa -->
         <ImageView
             android:id="@+id/background_image"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:contentDescription="@string/bg_image_desc"
             android:importantForAccessibility="no"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -27,8 +27,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.1"
-            app:srcCompat="@drawable/logo_gradient_circle" />
+            app:srcCompat="@drawable/logo_gradient_circle"
+            tools:ignore="ContentDescription" />
 
+        <!-- Logo principal -->
         <ImageView
             android:id="@+id/logo_bmis_image"
             android:layout_width="0dp"
@@ -44,6 +46,7 @@
             app:layout_constraintWidth_percent="0.8"
             app:srcCompat="@drawable/logo_image_bmis" />
 
+        <!-- Imagen decorativa avión -->
         <ImageView
             android:id="@+id/plane_image"
             android:layout_width="0dp"
@@ -59,46 +62,38 @@
             app:layout_constraintWidth_percent="0.6"
             app:srcCompat="@drawable/logo_plane" />
 
+        <!-- Título y subtítulo -->
         <TextView
             android:id="@+id/title_bmis_text"
+            style="@style/TextAppearance.App.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
-            android:fontFamily="@font/montserrat_extrabold"
             android:text="@string/bmis_title"
-            android:textAlignment="center"
-            android:textColor="@color/accent_gold"
-            android:textSize="@dimen/text_size_xlarge"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/logo_bmis_image" />
 
         <TextView
             android:id="@+id/subtitle_control_app"
+            style="@style/TextAppearance.App.Subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_xsmall"
-            android:fontFamily="@font/montserrat"
             android:text="@string/control_app"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_large"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title_bmis_text" />
 
+        <!-- Input Phone -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_layout_phone"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/Widget.App.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_large"
             android:hint="@string/phone_hint"
-            android:textColorHint="@color/white"
-            app:boxStrokeColor="@color/white"
-            app:hintTextColor="@color/white"
             app:startIconDrawable="@drawable/ic_user_white"
-            app:startIconTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/subtitle_control_app"
@@ -109,25 +104,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/input_height"
                 android:autofillHints="phone"
+                android:background="@drawable/txt_rounded_corner_white"
                 android:inputType="phone"
-                android:paddingStart="@dimen/input_padding_start"
-                android:paddingEnd="@dimen/input_padding_end"
                 android:textColor="@color/white"
+                android:paddingStart="@dimen/input_padding_start"
+                android:paddingEnd="@dimen/input_padding_start"
                 android:textSize="@dimen/text_size_input" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Input Password -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_layout_password"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/Widget.App.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
             android:hint="@string/password_hint"
-            android:textColorHint="@color/white"
-            app:boxStrokeColor="@color/white"
-            app:hintTextColor="@color/white"
             app:startIconDrawable="@drawable/ic_lock_white"
-            app:startIconTint="@color/white"
+            app:passwordToggleEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/input_layout_phone"
@@ -138,13 +133,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/input_height"
                 android:autofillHints="password"
+                android:background="@drawable/txt_rounded_corner_white"
                 android:inputType="textPassword"
                 android:paddingStart="@dimen/input_padding_start"
-                android:paddingEnd="@dimen/input_padding_end"
+                android:paddingEnd="@dimen/input_padding_start"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_input" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Remember me y Forgot password -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/remember_forgot_container"
             android:layout_width="0dp"
@@ -162,35 +159,35 @@
                 android:buttonTint="@color/white"
                 android:text="@string/remember_me"
                 android:textColor="@color/white"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintBaseline_toBaselineOf="@id/forgot_password_text"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/forgot_password_text"
+                style="@style/TextAppearance.App.Link"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_medium"
                 android:text="@string/forget_password"
-                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <!-- Crear cuenta -->
         <TextView
             android:id="@+id/create_account_text"
+            style="@style/TextAppearance.App.Link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
             android:text="@string/new_user_signup"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/remember_forgot_container" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- BottomSheet -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
@@ -199,34 +196,32 @@
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
         <ImageView
-            android:id="@+id/line"
+            android:id="@+id/bottom_sheet_handle"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/margin_small"
             android:contentDescription="@null"
+            android:importantForAccessibility="no"
             android:scaleType="centerCrop"
             android:src="@drawable/img_login_dialog_line"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/myButton"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_button"
+            style="@style/Widget.App.Button.Filled"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginBottom="@dimen/margin_medium"
-            android:background="@drawable/btn_border_white_bg_green"
-            android:elevation="8dp"
             android:text="@string/access"
-            android:textColor="@color/white"
             android:visibility="gone"
-            app:backgroundTint="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/line"
+            app:layout_constraintTop_toBottomOf="@id/bottom_sheet_handle"
             app:layout_constraintWidth_percent="0.85" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

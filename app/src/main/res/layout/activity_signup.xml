@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EDE7D9"
+    android:background="@color/fondo_principal_beige"
     tools:context=".ui.auth.SignupActivity">
 
     <androidx.core.widget.NestedScrollView
@@ -20,7 +20,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/top_green_section"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="@dimen/top_section_height"
                 android:background="@drawable/dialog_bg_signup"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -36,8 +36,8 @@
                     android:gravity="start"
                     android:letterSpacing="-0.02"
                     android:text="@string/create_account_title"
-                    android:textColor="@android:color/white"
-                    android:textSize="32sp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_title"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,7 @@
                     android:src="@drawable/img_signup_exit"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@android:color/white" />
+                    app:tint="@color/white" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -164,7 +164,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_xsmall"
                     android:text="@string/terms_and_conditions"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/text_size_small"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/checkbox_terms"
@@ -177,12 +177,12 @@
                 android:id="@+id/button_register"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="52dp"
+                android:layout_marginTop="@dimen/button_margin_top"
                 android:background="@drawable/btn_border_white_bg_green"
                 android:paddingTop="@dimen/button_padding"
                 android:paddingBottom="@dimen/button_padding"
                 android:text="@string/register_button"
-                android:textColor="@android:color/white"
+                android:textColor="@color/white"
                 android:textSize="@dimen/text_size_button"
                 app:backgroundTint="@null"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -213,7 +213,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_xsmall"
                 android:text="@string/login_link"
-                android:textColor="@android:color/black"
+                android:textColor="@color/black"
                 android:textSize="@dimen/text_size_small"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/text_view_login_prompt"

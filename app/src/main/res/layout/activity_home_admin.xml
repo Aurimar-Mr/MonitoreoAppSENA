@@ -24,7 +24,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ImageContrastCheck" />
 
-
     <ImageView
         android:id="@+id/settings_icon"
         android:layout_width="@dimen/icon_size_l"
@@ -92,5 +91,4 @@
         app:layout_constraintTop_toBottomOf="@id/animation_view"
         app:layout_constraintWidth_percent="0.9"
         tools:ignore="VisualLintBounds" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
