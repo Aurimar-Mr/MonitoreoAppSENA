@@ -1,36 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Tamaños de texto -->
-    <dimen name="text_size_xlarge">58sp</dimen> <!-- Título principal -->
-    <dimen name="text_size_large">20sp</dimen>  <!-- Subtítulos -->
-    <dimen name="text_size_input">20sp</dimen>  <!-- Inputs -->
-    <dimen name="text_size_normal">16sp</dimen> <!-- Textos generales -->
 
-    <!-- Altura de campos de entrada -->
+    <dimen name="text_size_xxs">12sp</dimen>
+    <dimen name="text_size_xs">14sp</dimen>
+    <dimen name="text_size_s">16sp</dimen>
+    <dimen name="text_size_m">18sp</dimen>
+    <dimen name="text_size_l">20sp</dimen>
+    <dimen name="text_size_xl">40sp</dimen>
+    <dimen name="text_size_xxl">58sp</dimen>
+    <dimen name="spacing_xxs">4dp</dimen>
+    <dimen name="spacing_xs">8dp</dimen>
+    <dimen name="spacing_s">16dp</dimen>
+    <dimen name="spacing_m">24dp</dimen>
+    <dimen name="spacing_l">32dp</dimen>
+    <dimen name="spacing_xl">64dp</dimen>
+    <dimen name="spacing_xxl">96dp</dimen>
+    <dimen name="icon_size_s">16dp</dimen>
+    <dimen name="icon_size_m">24dp</dimen>
+    <dimen name="icon_size_l">32dp</dimen>
+
+    <dimen name="corner_radius_s">8dp</dimen>
+    <dimen name="corner_radius_m">16dp</dimen>
+    <dimen name="corner_radius_l">24dp</dimen>
+
+    <dimen name="elevation_s">2dp</dimen>
+    <dimen name="elevation_m">4dp</dimen>
+    <dimen name="elevation_l">8dp</dimen>
+
     <dimen name="input_height">62dp</dimen>
+    <dimen name="button_height">48dp</dimen> <dimen name="header_height">143dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
 
-    <!-- Márgenes generales -->
-    <dimen name="margin_xsmall">4dp</dimen>
-    <dimen name="margin_small">16dp</dimen>
-    <dimen name="margin_normal">16dp</dimen>
-    <dimen name="margin_medium">32dp</dimen>
-    <dimen name="margin_large">32dp</dimen>
-    <dimen name="margin_xlarge">64dp</dimen>
-
-    <!-- Márgenes específicos -->
-    <dimen name="input_horizontal_margin">32dp</dimen>
     <dimen name="button_horizontal_margin">64dp</dimen>
-
-    <!-- Padding para EditText -->
+    <dimen name="button_padding">12dp</dimen>
     <dimen name="input_padding_start">50dp</dimen>
     <dimen name="input_padding_end">15dp</dimen>
 
-    <!-- Márgenes de actividad por defecto -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="drawable_padding">8dp</dimen>
-    <dimen name="padding_input">16dp</dimen>
+
+        <!-- Márgenes -->
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+
+    <!-- Paddings -->
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+
+        <!-- Tamaños de texto -->
     <dimen name="text_size_small">14sp</dimen>
-    <dimen name="text_size_button">18sp</dimen>
-    <dimen name="button_padding">12dp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">40sp</dimen>
+
+        <!-- CardView / MaterialCardView -->
+    <dimen name="alerta_max_width">280dp</dimen>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+
+    <!-- Imagen pequeña y responsiva -->
+    <dimen name="alerta_image_width">120dp</dimen>
+    <dimen name="alerta_image_height">80dp</dimen>
+
+    <!-- Márgenes -->
+    <dimen name="default_margin">16dp</dimen>
+
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="padding_normal">16dp</dimen>
+
+    <dimen name="margin_xlarge">80dp</dimen>
+
+
+    <!-- Inputs -->
+    <dimen name="input_min_height">60dp</dimen>
+
+    <!-- Botones -->
+    <dimen name="button_corner_radius">12dp</dimen>
+    <dimen name="button_padding_vertical">12dp</dimen>
+
+
+    <!-- Iconos -->
+    <dimen name="icon_lock_width">104dp</dimen>
+    <dimen name="icon_lock_height">123dp</dimen>
+
+    <!-- Textos -->
+    <dimen name="text_title_large">40sp</dimen>
+    <dimen name="text_body">16sp</dimen>
+    <dimen name="text_button">18sp</dimen>
+
+    <!-- Bordes / radios -->
+    <dimen name="corner_radius">12dp</dimen>
+
+
+    <!-- Tamaños de iconos -->
+    <dimen name="icon_size">32dp</dimen>
+
+    <!-- Textos -->
+    <dimen name="text_title">20sp</dimen>
+    <dimen name="text_welcome">24sp</dimen>
+
+    <!-- Altura mínima de header (por si se necesita) -->
+    <dimen name="header_margin_top">4dp</dimen>
+
+    <!-- Margenes generales -->
+    <dimen name="margin_xsmall">4dp</dimen>
+
+    <!-- Tamaños de texto -->
+    <dimen name="text_size_input">16sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+
+
 </resources>

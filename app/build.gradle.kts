@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.sena.monitoreo"
-    compileSdk = 36
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.sena.monitoreo"

@@ -75,4 +75,5 @@
     <string name="lecturas_en_tiempo_real">Lecturas en tiempo real</string>
     <string name="estado_del_sensor_de_temperatura">Estado del sensor de temperatura</string>
     <string name="estado_del_sensor_de_presi_n">Estado del sensor de presión</string>
+    <string name="alerta_icon_desc">Imagen de Alerta</string>
 </resources>

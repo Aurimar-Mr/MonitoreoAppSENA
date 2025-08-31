@@ -10,4 +10,17 @@
     <color name="fondo_principal_beige">#EFEBE6</color>
     <color name="verde_azulado_profundo">#368C8B</color>
     <color name="naranja_ligero">#FFBD59</color>
+    <color name="green_primary">#4CAF50</color> <!-- Verde Material -->
+    <color name="background_beige">#EDE7D9</color> <!-- Rojo Material -->
+    <!-- Paleta personalizada -->
+    <color name="gray_dark">#455A64</color>
+    <color name="gray_light">#9E9E9E</color>
+
+    <!-- Botones -->
+    <color name="button_bg_forgotpass">#CCE3E3</color>
+
+
+    <!-- Botones -->
+    <color name="button_primary">#4CA6A8</color>
+    <color name="button_text">#000000</color>
 </resources>

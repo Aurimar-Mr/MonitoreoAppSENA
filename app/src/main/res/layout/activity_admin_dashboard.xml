@@ -1,116 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    android:background="@color/fondo_principal_beige"
+    tools:context=".ui.admin.AdminDashboardActivity">
+    <!-- proporción estilo “banner”. 3:1 -->
+    <ImageView
+        android:id="@+id/header_background_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_xxs"
+        android:contentDescription="@string/desc_header_background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_header_screen_main"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/fondo_principal_beige"
-        tools:context=".ui.admin.AdministradorActivity">
 
-        <ImageView
-            android:id="@+id/header_background_image"
-            android:layout_width="0dp"
-            android:layout_height="143dp"
-            android:layout_marginTop="4dp"
-            android:contentDescription="@string/desc_header_background"
-            android:scaleType="centerCrop"
-            android:src="@drawable/img_header_screen_main"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ImageContrastCheck" />
+    <ImageView
+        android:id="@+id/settings_icon"
+        android:layout_width="@dimen/icon_size_l"
+        android:layout_height="@dimen/icon_size_l"
+        android:layout_marginStart="@dimen/spacing_s"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:contentDescription="@string/desc_icon_settings"
+        android:src="@drawable/ic_settings_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/settings_icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:contentDescription="@string/desc_icon_settings"
-            android:src="@drawable/ic_settings_white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="@dimen/icon_size_l"
+        android:layout_height="@dimen/icon_size_l"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:layout_marginEnd="@dimen/spacing_s"
+        android:contentDescription="@string/desc_icon_user"
+        android:src="@drawable/ic_user_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/user_icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:contentDescription="@string/desc_icon_user"
-            android:src="@drawable/ic_user_white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/user_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_xs"
+        android:text="@string/admin_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_l"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/user_icon"
+        app:layout_constraintEnd_toStartOf="@+id/user_icon"
+        app:layout_constraintTop_toTopOf="@+id/user_icon" />
 
-        <TextView
-            android:id="@+id/user_title"
-            android:layout_width="wrap_content"
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_s"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_background_image">
+
+        <!-- Cambio de LinearLayout a ConstraintLayout para mejor performance -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:text="@string/admin_title"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/user_icon"
-            app:layout_constraintEnd_toStartOf="@+id/user_icon"
-            app:layout_constraintTop_toTopOf="@+id/user_icon" />
+            android:padding="@dimen/spacing_s">
 
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/nested_scroll_view"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header_background_image">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
+            <include
+                android:id="@+id/graficas_admin_section"
+                layout="@layout/include_graficas_admin"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="16dp">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-                <include
-                    android:id="@+id/include_graficas_admin"
-                    layout="@layout/include_graficas_admin"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <include
+                android:id="@+id/ia_admin_section"
+                layout="@layout/include_ia_admin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_s"
+                app:layout_constraintTop_toBottomOf="@id/graficas_admin_section"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-                <include
-                    android:id="@+id/include_ia_admin"
-                    layout="@layout/include_ia_admin"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/include_graficas_admin" />
+            <include
+                android:id="@+id/user_admin_section"
+                layout="@layout/include_user_admin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_s"
+                app:layout_constraintTop_toBottomOf="@id/ia_admin_section"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-                <include
-                    android:id="@+id/include_user_admin"
-                    layout="@layout/include_user_admin"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/include_ia_admin" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
-        </androidx.core.widget.NestedScrollView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.drawerlayout.widget.DrawerLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,8 +27,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.1"
-            app:srcCompat="@drawable/logo_gradient_circle"
-            tools:ignore="ImageContrastCheck" />
+            app:srcCompat="@drawable/logo_gradient_circle" />
+
         <ImageView
             android:id="@+id/logo_bmis_image"
             android:layout_width="0dp"
@@ -38,7 +38,6 @@
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.743"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.161"
@@ -72,8 +71,7 @@
             android:textSize="@dimen/text_size_xlarge"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/logo_bmis_image"
-            tools:ignore="TextContrastCheck" />
+            app:layout_constraintTop_toBottomOf="@id/logo_bmis_image" />
 
         <TextView
             android:id="@+id/subtitle_control_app"
@@ -86,53 +84,66 @@
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_large"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title_bmis_text" />
 
-        <EditText
-            android:id="@+id/input_phone"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_phone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
-            android:layout_height="@dimen/input_height"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_large"
-            android:background="@drawable/txt_rounded_corner_white"
-            android:drawableStart="@drawable/ic_user_white"
-            android:autofillHints="phone"
-            android:drawablePadding="10dp"
             android:hint="@string/phone_hint"
-            android:inputType="phone"
-            android:paddingStart="@dimen/input_padding_start"
-            android:paddingEnd="@dimen/input_padding_end"
-            android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="@dimen/text_size_input"
+            app:boxStrokeColor="@color/white"
+            app:hintTextColor="@color/white"
+            app:startIconDrawable="@drawable/ic_user_white"
+            app:startIconTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/subtitle_control_app"
-            app:layout_constraintWidth_percent="0.85"
-            tools:ignore="VisualLintTextFieldSize" />
+            app:layout_constraintWidth_percent="0.85">
 
-        <EditText
-            android:id="@+id/input_password"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:autofillHints="phone"
+                android:inputType="phone"
+                android:paddingStart="@dimen/input_padding_start"
+                android:paddingEnd="@dimen/input_padding_end"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_input" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
-            android:layout_height="@dimen/input_height"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
-            android:background="@drawable/txt_rounded_corner_white"
-            android:drawableStart="@drawable/ic_lock_white"
-            android:autofillHints="password"
-            android:drawablePadding="10dp"
             android:hint="@string/password_hint"
-            android:inputType="textPassword"
-            android:paddingStart="@dimen/input_padding_start"
-            android:paddingEnd="@dimen/input_padding_end"
-            android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="@dimen/text_size_input"
+            app:boxStrokeColor="@color/white"
+            app:hintTextColor="@color/white"
+            app:startIconDrawable="@drawable/ic_lock_white"
+            app:startIconTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/input_phone"
-            app:layout_constraintWidth_percent="0.85"
-            tools:ignore="VisualLintTextFieldSize" />
+            app:layout_constraintTop_toBottomOf="@id/input_layout_phone"
+            app:layout_constraintWidth_percent="0.85">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:autofillHints="password"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/input_padding_start"
+                android:paddingEnd="@dimen/input_padding_end"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_input" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/remember_forgot_container"
@@ -141,7 +152,7 @@
             android:layout_marginTop="@dimen/margin_small"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/input_password"
+            app:layout_constraintTop_toBottomOf="@id/input_layout_password"
             app:layout_constraintWidth_percent="0.85">
 
             <CheckBox
@@ -158,7 +169,7 @@
                 android:id="@+id/forgot_password_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_medium"
                 android:text="@string/forget_password"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -204,10 +215,8 @@
             android:id="@+id/myButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/button_horizontal_margin"
-            android:layout_marginTop="@dimen/margin_normal"
-            android:layout_marginEnd="@dimen/button_horizontal_margin"
-            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
             android:background="@drawable/btn_border_white_bg_green"
             android:elevation="8dp"
             android:text="@string/access"
@@ -217,6 +226,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/line" />
+            app:layout_constraintTop_toBottomOf="@id/line"
+            app:layout_constraintWidth_percent="0.85" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
