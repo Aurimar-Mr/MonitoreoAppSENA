@@ -41,5 +41,9 @@
     <color name="text_hint">#9E9E9E</color>
     <color name="text_on_primary">#EEEEEE</color>
     <color name="gris_medio">#9E9E9E</color>
+    <color name="gris_claro">#212121</color>
+
+
+
 
 </resources>

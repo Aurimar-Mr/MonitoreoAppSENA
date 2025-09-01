@@ -37,7 +37,7 @@
                     android:letterSpacing="-0.02"
                     android:text="@string/create_account_title"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_size_title"
+                    android:textSize="@dimen/text_size_xl"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

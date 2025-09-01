@@ -109,7 +109,8 @@
                 android:textColor="@color/white"
                 android:paddingStart="@dimen/input_padding_start"
                 android:paddingEnd="@dimen/input_padding_start"
-                android:textSize="@dimen/text_size_input" />
+                android:textSize="@dimen/text_size_input"
+                tools:ignore="VisualLintTextFieldSize" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -138,7 +139,8 @@
                 android:paddingStart="@dimen/input_padding_start"
                 android:paddingEnd="@dimen/input_padding_start"
                 android:textColor="@color/white"
-                android:textSize="@dimen/text_size_input" />
+                android:textSize="@dimen/text_size_input"
+                tools:ignore="VisualLintTextFieldSize" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Remember me y Forgot password -->
@@ -160,7 +162,8 @@
                 android:text="@string/remember_me"
                 android:textColor="@color/white"
                 app:layout_constraintBaseline_toBaselineOf="@id/forgot_password_text"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/forgot_password_text"

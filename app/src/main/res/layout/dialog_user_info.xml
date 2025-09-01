@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="@dimen/dialog_padding"
@@ -45,11 +46,12 @@
             android:id="@+id/buttonBlockUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/bloquear_usuario"
-            android:textColor="@color/block_button_text"
             android:backgroundTint="@color/block_button"
             android:paddingTop="@dimen/button_vertical_padding"
-            android:paddingBottom="@dimen/button_vertical_padding"/>
+            android:paddingBottom="@dimen/button_vertical_padding"
+            android:text="@string/bloquear_usuario"
+            android:textColor="@color/gris_claro"
+            tools:ignore="VisualLintButtonSize" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -113,6 +113,7 @@
     <dimen name="indicator_size">16dp</dimen>
 
 
+
     <dimen name="alerta_max_width">280dp</dimen>
     <dimen name="button_horizontal_margin">64dp</dimen>
     <dimen name="dialog_spacing">24dp</dimen>
@@ -124,5 +125,7 @@
     <dimen name="margin_bottom_titulo">20dp</dimen>
     <dimen name="margin_bottom_tab">20dp</dimen>
     <dimen name="text_margin_start">8dp</dimen>
+    <dimen name="margin_xsmall">12sp</dimen>
+    <dimen name="button_vertical_padding">2sp</dimen>
 
 </resources>
