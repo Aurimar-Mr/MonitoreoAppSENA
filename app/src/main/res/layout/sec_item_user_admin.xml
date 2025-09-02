@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/item_spacing_small"
@@ -21,8 +22,9 @@
             android:id="@+id/img_indicador_estado"
             android:layout_width="@dimen/indicator_size"
             android:layout_height="@dimen/indicator_size"
+            android:contentDescription="@string/desc_indicador_activo"
             android:src="@drawable/ic_admin_active_user"
-            android:contentDescription="@string/desc_indicador_activo" />
+            tools:ignore="ImageContrastCheck" />
 
         <TextView
             android:id="@+id/text_nombre_usuario"
@@ -39,10 +41,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/usuario_ver"
-            android:textColor="@color/verde_azulado_profundo"
+            android:textColor="#00695C"
             app:icon="@drawable/ic_admin_visibility_user"
-            app:iconTint="@color/verde_azulado_profundo"
-            app:iconGravity="textStart"/>
+            app:iconGravity="textStart"
+            app:iconTint="@color/verde_azulado_profundo" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

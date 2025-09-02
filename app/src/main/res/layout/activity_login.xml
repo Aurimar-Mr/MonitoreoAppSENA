@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/login_root_layout"
+    android:id="@+id/container_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_background"
-    tools:context=".ui.auth.LoginActivity">
+    tools:context="com.sena.monitoreo.ui.auth.LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main_content_layout"

@@ -12,30 +12,24 @@
         android:id="@+id/card_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
-        android:gravity="center"
-        android:textColor="@color/texto_oscuro"
-        android:textSize="@dimen/text_size_l"
-        tools:text="Estado del sensor de gas" />
+        tools:text="Estado del sensor de gas"
+        style="@style/TextAppearance.CardTitle" />
 
     <TextView
         android:id="@+id/card_estado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_xs"
-        android:fontFamily="@font/montserrat_extrabold"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_size_l"
-        android:textStyle="bold"
-        tools:text="Activo" />
+        tools:text="Activo"
+        style="@style/TextAppearance.CardStatus" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_xs"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/card_icon"
@@ -48,10 +42,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat"
             android:text="@string/lecturas_en_tiempo_real"
-            android:textColor="@color/texto_oscuro"
-            android:textSize="@dimen/text_size_m" />
+            style="@style/TextAppearance.CardLabel" />
     </LinearLayout>
 
     <com.github.mikephil.charting.charts.LineChart

@@ -13,11 +13,12 @@
         android:id="@+id/buttonCloseDialog"
         android:layout_width="@dimen/close_button_size"
         android:layout_height="@dimen/close_button_size"
-        android:src="@drawable/ic_close"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/cerrar"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        tools:ignore="TouchTargetSizeCheck" />
 
     <!-- Contenedor de usuario -->
     <LinearLayout

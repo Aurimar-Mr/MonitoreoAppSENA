@@ -45,11 +45,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/tab_todos" />
         </com.google.android.material.tabs.TabLayout>
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_usuarios"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"
             tools:listitem="@layout/sec_item_user_admin"
             tools:itemCount="3" />
     </LinearLayout>

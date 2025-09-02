@@ -8,101 +8,59 @@
     android:layout_height="match_parent"
     android:background="@color/fondo_principal_beige"
     tools:context=".ui.admin.AdminDashboardActivity">
-    <!-- proporción estilo “banner”. 3:1 -->
-    <ImageView
-        android:id="@+id/header_background_image"
+
+    <!-- Header -->
+    <include
+        android:id="@+id/main_header"
+        layout="@layout/header_layout_admin"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="@dimen/spacing_xxs"
-        android:contentDescription="@string/desc_header_background"
-        android:scaleType="centerCrop"
-        android:src="@drawable/img_header_screen_main"
-        app:layout_constraintDimensionRatio="3:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ImageContrastCheck" />
-
-
-    <ImageView
-        android:id="@+id/settings_icon"
-        android:layout_width="@dimen/icon_size_l"
-        android:layout_height="@dimen/icon_size_l"
-        android:layout_marginStart="@dimen/spacing_s"
-        android:layout_marginTop="@dimen/spacing_m"
-        android:contentDescription="@string/desc_icon_settings"
-        android:src="@drawable/ic_settings_white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/user_icon"
-        android:layout_width="@dimen/icon_size_l"
-        android:layout_height="@dimen/icon_size_l"
-        android:layout_marginTop="@dimen/spacing_m"
-        android:layout_marginEnd="@dimen/spacing_s"
-        android:contentDescription="@string/desc_icon_user"
-        android:src="@drawable/ic_user_white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/user_title"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/spacing_xs"
-        android:text="@string/admin_title"
-        android:textColor="@color/white"
-        android:textSize="@dimen/text_size_l"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/user_icon"
-        app:layout_constraintEnd_toStartOf="@+id/user_icon"
-        app:layout_constraintTop_toTopOf="@+id/user_icon" />
+        android:contentDescription="@string/desc_header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Contenido scrollable -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nested_scroll_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/spacing_s"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_header"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header_background_image">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <!-- Cambio ConstraintLayout -> LinearLayout -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:padding="@dimen/spacing_s">
 
             <include
                 android:id="@+id/graficas_admin_section"
                 layout="@layout/include_graficas_admin"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:contentDescription="@string/desc_graficas" />
 
             <include
                 android:id="@+id/ia_admin_section"
                 layout="@layout/include_ia_admin"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_s"
-                app:layout_constraintTop_toBottomOf="@id/graficas_admin_section"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:contentDescription="@string/desc_ia" />
 
             <include
                 android:id="@+id/user_admin_section"
                 layout="@layout/include_user_admin"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_s"
-                app:layout_constraintTop_toBottomOf="@id/ia_admin_section"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:contentDescription="@string/desc_users" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

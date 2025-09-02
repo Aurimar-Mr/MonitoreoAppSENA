@@ -22,23 +22,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/top_section_height"
                 android:background="@drawable/dialog_bg_signup"
+                android:paddingBottom="@dimen/margin_xlarge"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:id="@+id/title_text"
+                    style="@style/TextAppearance.Montserrat.Title.White"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_large"
-                    android:layout_marginBottom="@dimen/margin_xlarge"
-                    android:fontFamily="@font/montserrat_extrabold"
                     android:gravity="start"
                     android:letterSpacing="-0.02"
                     android:text="@string/create_account_title"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/text_size_xl"
-                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -55,88 +52,76 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:tint="@color/white" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <EditText
-                android:id="@+id/edit_text_name"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/input_height"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_name"
+                style="@style/Widget.App.TextInputLayout.Green"
                 android:layout_marginTop="@dimen/margin_xlarge"
-                android:autofillHints="name"
-                android:background="@drawable/txt_rounded_corner_green"
-                android:drawableStart="@drawable/ic_user_green"
-                android:drawablePadding="@dimen/drawable_padding"
-                android:hint="@string/hint_name"
-                android:inputType="textPersonName"
-                android:paddingStart="@dimen/padding_input"
-                android:paddingEnd="@dimen/padding_input"
-                android:textSize="@dimen/text_size_input"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/top_green_section"
-                app:layout_constraintWidth_percent="0.85"
-                tools:ignore="VisualLintTextFieldSize" />
-
-            <EditText
-                android:id="@+id/edit_text_phone"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/input_height"
-                android:hint="@string/n_mero_de_celular"
-                android:drawableStart="@drawable/ic_phone_green"
-                android:drawablePadding="@dimen/drawable_padding"
-                android:background="@drawable/txt_rounded_corner_green"
-                android:paddingStart="@dimen/padding_input"
-                android:paddingEnd="@dimen/padding_input"
-                android:inputType="phone"
-                android:textSize="@dimen/text_size_input"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:autofillHints="phone"
+                app:startIconDrawable="@drawable/ic_user_green"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_text_name"
-                app:layout_constraintWidth_percent="0.85"
-                tools:ignore="VisualLintTextFieldSize" />
+                app:layout_constraintWidth_percent="0.85">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_name"
+                    style="@style/Widget.App.TextInputEditText.Green"
+                    android:hint="@string/hint_name"
+                    android:autofillHints="name"
+                    android:inputType="textPersonName"
+                    tools:ignore="VisualLintTextFieldSize" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/edit_text_password"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/input_height"
-                android:hint="@string/contrase_a"
-                android:drawableStart="@drawable/ic_lock_green"
-                android:drawablePadding="@dimen/drawable_padding"
-                android:background="@drawable/txt_rounded_corner_green"
-                android:paddingStart="@dimen/padding_input"
-                android:paddingEnd="@dimen/padding_input"
-                android:inputType="textPassword"
-                android:textSize="@dimen/text_size_input"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:autofillHints="password"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_phone"
+                style="@style/Widget.App.TextInputLayout.Green"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_name"
+                app:startIconDrawable="@drawable/ic_phone_green"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_text_phone"
-                app:layout_constraintWidth_percent="0.85"
-                tools:ignore="VisualLintTextFieldSize" />
+                app:layout_constraintWidth_percent="0.85">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_phone"
+                    style="@style/Widget.App.TextInputEditText.Green"
+                    android:hint="@string/n_mero_de_celular"
+                    android:autofillHints="phone"
+                    android:inputType="phone"
+                    tools:ignore="VisualLintTextFieldSize" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/edit_text_confirm_password"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/input_height"
-                android:hint="@string/vuelve_a_escribir_tu_contrase_a"
-                android:drawableStart="@drawable/ic_lock_green"
-                android:drawablePadding="@dimen/drawable_padding"
-                android:background="@drawable/txt_rounded_corner_green"
-                android:paddingStart="@dimen/padding_input"
-                android:paddingEnd="@dimen/padding_input"
-                android:inputType="textPassword"
-                android:textSize="@dimen/text_size_input"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:autofillHints="newPassword"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_password"
+                style="@style/Widget.App.TextInputLayout.Green"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_phone"
+                app:startIconDrawable="@drawable/ic_lock_green"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_text_password"
-                app:layout_constraintWidth_percent="0.85"
-                tools:ignore="VisualLintTextFieldSize" />
+                app:layout_constraintWidth_percent="0.85">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_password"
+                    style="@style/Widget.App.TextInputEditText.Green"
+                    android:hint="@string/contrase_a"
+                    android:autofillHints="password"
+                    android:inputType="textPassword"
+                    tools:ignore="VisualLintTextFieldSize" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_confirm_password"
+                style="@style/Widget.App.TextInputLayout.Green"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_password"
+                app:startIconDrawable="@drawable/ic_lock_green"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_percent="0.85">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_confirm_password"
+                    style="@style/Widget.App.TextInputEditText.Green"
+                    android:hint="@string/vuelve_a_escribir_tu_contrase_a"
+                    android:autofillHints="newPassword"
+                    android:inputType="textPassword"
+                    tools:ignore="VisualLintTextFieldSize" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/terms_container"
@@ -145,7 +130,7 @@
                 android:layout_marginTop="@dimen/margin_medium"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_text_confirm_password"
+                app:layout_constraintTop_toBottomOf="@id/text_input_layout_confirm_password"
                 app:layout_constraintWidth_percent="0.85">
 
                 <CheckBox
@@ -162,31 +147,23 @@
                     android:id="@+id/text_view_terms_and_conditions"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_xsmall"
                     android:text="@string/terms_and_conditions"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size_small"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/checkbox_terms"
                     app:layout_constraintStart_toEndOf="@+id/checkbox_terms"
-                    app:layout_constraintTop_toTopOf="@+id/checkbox_terms"/>
-
+                    app:layout_constraintTop_toTopOf="@+id/checkbox_terms" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
                 android:id="@+id/button_register"
+                style="@style/Widget.App.Button.Primary"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/button_margin_top"
-                android:background="@drawable/btn_border_white_bg_green"
-                android:paddingTop="@dimen/button_padding"
-                android:paddingBottom="@dimen/button_padding"
                 android:text="@string/register_button"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_button"
-                app:backgroundTint="@null"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.508"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/terms_container"
                 app:layout_constraintWidth_percent="0.85"

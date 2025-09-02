@@ -16,53 +16,14 @@
         android:background="@color/fondo_principal_beige"
         tools:context=".ui.admin.AdministradorActivity">
 
-        <ImageView
-            android:id="@+id/header_background_image"
+        <include
+            android:id="@+id/header_user"
+            layout="@layout/header_layout_user"
             android:layout_width="0dp"
-            android:layout_height="@dimen/header_height"
-            android:layout_marginTop="@dimen/spacing_xxs"
-            android:contentDescription="@string/desc_header_background"
-            android:scaleType="centerCrop"
-            android:src="@drawable/img_header_screen_main"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ImageContrastCheck" />
-
-        <ImageView
-            android:id="@+id/settings_icon"
-            android:layout_width="@dimen/icon_size_l"
-            android:layout_height="@dimen/icon_size_l"
-            android:layout_marginStart="@dimen/spacing_s"
-            android:layout_marginTop="@dimen/spacing_m"
-            android:contentDescription="@string/desc_icon_settings"
-            android:src="@drawable/ic_settings_white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/user_icon"
-            android:layout_width="@dimen/icon_size_l"
-            android:layout_height="@dimen/icon_size_l"
-            android:layout_marginTop="@dimen/spacing_m"
-            android:layout_marginEnd="@dimen/spacing_s"
-            android:contentDescription="@string/desc_icon_user"
-            android:src="@drawable/ic_user_white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/user_title"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/spacing_xs"
-            android:text="@string/user_title"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_l"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/user_icon"
-            app:layout_constraintEnd_toStartOf="@+id/user_icon"
-            app:layout_constraintTop_toTopOf="@+id/user_icon" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="0dp"
@@ -71,46 +32,21 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header_background_image">
+            app:layout_constraintTop_toBottomOf="@id/header_user">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/spacing_m">
 
-                <LinearLayout
+                <include
                     android:id="@+id/card_lectura_voz"
+                    layout="@layout/include_card_switch"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/txt_rounded_corner_green"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/spacing_s"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <TextView
-                        android:id="@+id/text_lectura_voz"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/montserrat"
-                        android:paddingStart="@dimen/spacing_m"
-                        android:paddingEnd="@dimen/spacing_s"
-                        android:text="@string/activar_lectura_de_voz"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/text_size_m" />
-
-                    <androidx.appcompat.widget.SwitchCompat
-                        android:id="@+id/switchLectura"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/spacing_s"
-                        android:checked="false"
-                        app:thumbTint="@color/white"
-                        app:trackTint="@color/turquesa_apagado" />
-                </LinearLayout>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <include
                     android:id="@+id/card_mq4"

@@ -9,7 +9,6 @@
     android:background="@color/naranja_ligero"
     tools:context=".ui.user.AlertsActivity">
 
-    <!-- Imagen principal -->
     <ImageView
         android:id="@+id/alerta"
         android:layout_width="0dp"
@@ -26,23 +25,18 @@
         app:layout_constraintVertical_chainStyle="packed"
         tools:ignore="ImageContrastCheck" />
 
-    <!-- Título -->
     <TextView
         android:id="@+id/alerta_title"
+        style="@style/TextAppearance.AlertaTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_large"
         android:text="@string/alerta"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/text_size_xlarge"
-        android:textStyle="bold"
-        app:fontFamily="@font/montserrat_extrabold"
         app:layout_constraintTop_toBottomOf="@+id/alerta"
         app:layout_constraintBottom_toTopOf="@id/ia_text_container"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Contenedor del texto de IA -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/ia_text_container"
         android:layout_width="0dp"
@@ -60,17 +54,14 @@
 
         <TextView
             android:id="@+id/ia_response_text"
+            style="@style/TextAppearance.AlertaBody"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_medium"
-            android:text="@string/esperando_datos_del_sensor"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/text_size_medium"
-            app:fontFamily="@font/montserrat" />
+            android:text="@string/esperando_datos_del_sensor" />
 
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Botón -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_message"
         android:layout_width="0dp"

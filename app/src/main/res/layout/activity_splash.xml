@@ -34,6 +34,7 @@
         android:id="@+id/circulo_logo"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/desc_img"
         android:src="@drawable/logo_fondo_circle"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,27 +42,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHeight_percent="0.55"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="VisualLintBounds" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_logo"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="1.5:1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/guideline_vertical_2"
+        app:layout_constraintDimensionRatio="1.5:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideline_vertical_1"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/logo_animado" />
+        app:lottie_rawRes="@raw/logo_animado"
+        tools:ignore="ImageContrastCheck" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_letras"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="1.8:1"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1.8:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideline_vertical_1"
@@ -69,6 +72,7 @@
         app:layout_constraintWidth_percent="0.5"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/letras_bmis_animado" />
+        app:lottie_rawRes="@raw/letras_bmis_animado"
+        tools:ignore="ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
