@@ -1,49 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Base Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gold">#EDB232</color>
-    <color name="turquesa">#00C9B6</color>
-    <color name="gray_dark">#455A64</color>
-    <color name="gray_light">#9E9E9E</color>
-    <color name="green_material">#4CAF50</color>
+    <color name="turquoise">#00C9B6</color>
     <color name="brown_light">#CD7F32</color>
-
-    <color name="fondo_principal_beige">#EFEBE6</color>
-    <color name="primary_background">#2A7676</color>
-    <color name="secondary_background">#efe8d8</color>
-    <color name="background_beige">#EDE7D9</color>
-    <color name="background_reset_password">#EDE7D9</color>
-    <color name="primary_background_light">#EDE7D9</color>
-    <color name="card_background">@color/fondo_principal_beige</color>
-
-    <color name="accent_gold">#edb232</color>
-    <color name="verde_azulado_profundo">#368C8B</color>
-    <color name="naranja_ligero">#FFBD59</color>
-    <color name="turquesa_apagado">#2b524a</color>
     <color name="green_primary">#4CAF50</color>
-    <color name="color_primary_beige">#F5F5DC</color>
-    <color name="color_green_dark">#006400</color>
+    <color name="green_dark">#006400</color>
     <color name="green_light">#C8E6C9</color>
-    <color name="icon_green">#129575</color>
+    <color name="green_icon">#129575</color>
+    <color name="orange_light">#FFBD59</color>
+    <color name="teal_dark">#2B524A</color>
+    <color name="teal_deep">#368C8B</color>
 
+    <!-- Gray Scale -->
+    <color name="gray_100">#EDE7D9</color>
+    <color name="gray_300">#EFEBE6</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_700">#455A64</color>
+    <color name="gray_900">#212121</color>
+
+    <!-- Backgrounds -->
+    <color name="background_primary">#2A7676</color>
+    <color name="background_secondary">#EFE8D8</color>
+    <color name="background_light">@color/gray_100</color>
+    <color name="background_card">@color/gray_300</color>
+    <color name="background_reset_password">@color/gray_100</color>
+
+    <!-- Buttons -->
     <color name="button_primary">#4CA6A8</color>
-    <color name="button_text">#000000</color>
-    <color name="button_bg_forgotpass">#CCE3E3</color>
-    <color name="block_button">#CD7F32</color>
-    <color name="block_button_text">@android:color/white</color>
-    <color name="button_green">#129575</color>
-    <color name="btn_border_green">@color/primary_background</color>
+    <color name="button_secondary">@color/green_icon</color>
+    <color name="button_disabled">#CCE3E3</color>
+    <color name="button_block">@color/brown_light</color>
+    <color name="button_text">@color/black</color>
+    <color name="button_text_block">@color/white</color>
+    <color name="button_border">@color/background_primary</color>
 
-    <color name="text_primary">#000000</color>
-    <color name="texto_oscuro">#333333</color>
-    <color name="text_hint_color">#9E9E9E</color>
-    <color name="text_hint">#9E9E9E</color>
+    <!-- Text -->
+    <color name="text_primary">@color/black</color>
+    <color name="text_secondary">#333333</color>
+    <color name="text_hint">@color/gray_500</color>
     <color name="text_on_primary">#EEEEEE</color>
-    <color name="gris_medio">#9E9E9E</color>
-    <color name="gris_claro">#212121</color>
-
-
-
 
 </resources>

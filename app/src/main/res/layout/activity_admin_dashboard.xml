@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondo_principal_beige"
+    android:background="@color/gray_300"
     tools:context=".ui.admin.AdminDashboardActivity">
 
     <!-- Header -->
@@ -15,7 +15,6 @@
         layout="@layout/header_layout_admin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/desc_header"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -25,7 +24,7 @@
         android:id="@+id/nested_scroll_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/spacing_s"
+        android:layout_marginTop="@dimen/spacing_medium"
         app:layout_constraintTop_toBottomOf="@id/main_header"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,30 +35,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="@dimen/spacing_s">
+            android:padding="@dimen/spacing_medium">
 
             <include
                 android:id="@+id/graficas_admin_section"
                 layout="@layout/include_graficas_admin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/desc_graficas" />
+                android:contentDescription="@string/desc_section_graphs" />
 
             <include
                 android:id="@+id/ia_admin_section"
                 layout="@layout/include_ia_admin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_s"
-                android:contentDescription="@string/desc_ia" />
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:contentDescription="@string/desc_section_ai" />
 
             <include
                 android:id="@+id/user_admin_section"
                 layout="@layout/include_user_admin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_s"
-                android:contentDescription="@string/desc_users" />
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:contentDescription="@string/desc_section_users" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

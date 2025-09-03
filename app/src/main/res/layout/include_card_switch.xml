@@ -7,7 +7,7 @@
     android:background="@drawable/txt_rounded_corner_green"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:padding="@dimen/spacing_s">
+    android:padding="@dimen/spacing_medium">
 
     <TextView
         android:id="@+id/text_lectura_voz"
@@ -15,9 +15,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:fontFamily="@font/montserrat"
-        android:paddingStart="@dimen/spacing_m"
-        android:paddingEnd="@dimen/spacing_s"
-        android:text="@string/activar_lectura_de_voz"
+        android:paddingStart="@dimen/spacing_large"
+        android:paddingEnd="@dimen/spacing_medium"
+        android:text="@string/ai_enable_voice_reading"
         android:textColor="@color/black"
         android:textSize="@dimen/text_size_m" />
 
@@ -25,8 +25,8 @@
         android:id="@+id/switchLectura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/spacing_s"
+        android:layout_marginEnd="@dimen/spacing_medium"
         android:checked="false"
         app:thumbTint="@color/white"
-        app:trackTint="@color/turquesa_apagado" />
+        app:trackTint="@color/teal_dark" />
 </LinearLayout>

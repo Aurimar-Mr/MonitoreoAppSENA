@@ -13,7 +13,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/fondo_principal_beige"
+        android:background="@color/gray_300"
         tools:context=".ui.admin.AdministradorActivity">
 
         <include
@@ -28,7 +28,7 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="@dimen/spacing_m"
+            android:layout_marginTop="@dimen/spacing_large"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/spacing_m">
+                android:padding="@dimen/spacing_large">
 
                 <include
                     android:id="@+id/card_lectura_voz"
@@ -53,7 +53,7 @@
                     layout="@layout/include_card_sensor_user"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/spacing_m"
+                    android:layout_marginTop="@dimen/spacing_large"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/card_lectura_voz" />
@@ -63,7 +63,7 @@
                     layout="@layout/include_card_sensor_user"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/spacing_m"
+                    android:layout_marginTop="@dimen/spacing_large"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/card_mq4" />
@@ -73,7 +73,7 @@
                     layout="@layout/include_card_sensor_user"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/spacing_m"
+                    android:layout_marginTop="@dimen/spacing_large"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/card_temperatura" />

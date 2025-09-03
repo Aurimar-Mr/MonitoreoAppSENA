@@ -5,16 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/dialog_padding"
+    android:padding="@dimen/spacing_large"
     android:background="@drawable/dialog_bg_admin_card_user"
     android:clipToPadding="false">
     <!-- Botón de cerrar -->
     <ImageButton
         android:id="@+id/buttonCloseDialog"
-        android:layout_width="@dimen/close_button_size"
-        android:layout_height="@dimen/close_button_size"
+        android:layout_width="@dimen/spacing_large"
+        android:layout_height="@dimen/spacing_large"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@string/cerrar"
+        android:contentDescription="@string/common_close"
         android:src="@drawable/ic_close"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,7 +26,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="@dimen/dialog_inner_padding"
+        android:paddingTop="@dimen/spacing_medium"
         app:layout_constraintTop_toBottomOf="@id/buttonCloseDialog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -36,22 +36,22 @@
             android:id="@+id/textViewUserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/nombre_usuario"
+            android:text="@string/user_name"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             android:textStyle="bold"
             android:gravity="center"
-            android:layout_marginBottom="@dimen/dialog_spacing"/>
+            android:layout_marginBottom="@dimen/spacing_large"/>
 
         <!-- Botón Bloquear Usuario -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonBlockUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/block_button"
-            android:paddingTop="@dimen/button_vertical_padding"
-            android:paddingBottom="@dimen/button_vertical_padding"
-            android:text="@string/bloquear_usuario"
-            android:textColor="@color/gris_claro"
+            android:backgroundTint="@color/brown_light"
+            android:paddingTop="@dimen/spacing_sm"
+            android:paddingBottom="@dimen/spacing_sm"
+            android:text="@string/user_block"
+            android:textColor="@color/gray_900"
             tools:ignore="VisualLintButtonSize" />
     </LinearLayout>
 

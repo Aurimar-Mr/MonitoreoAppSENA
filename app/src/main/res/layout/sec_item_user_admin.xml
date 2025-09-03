@@ -5,24 +5,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/item_spacing_small"
-    app:cardCornerRadius="@dimen/card_corner_radius"
-    app:cardElevation="@dimen/card_elevation_default"
-    app:cardBackgroundColor="@color/fondo_principal_beige">
+    android:layout_marginBottom="@dimen/spacing_small"
+    app:cardCornerRadius="@dimen/spacing_small"
+    app:cardElevation="@dimen/spacing_xxsmall"
+    app:cardBackgroundColor="@color/gray_300">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="@dimen/card_padding_small"
+        android:padding="@dimen/spacing_sm"
         android:background="@drawable/txt_rounded_corner_green">
 
         <ImageView
             android:id="@+id/img_indicador_estado"
-            android:layout_width="@dimen/indicator_size"
-            android:layout_height="@dimen/indicator_size"
-            android:contentDescription="@string/desc_indicador_activo"
+            android:layout_width="@dimen/spacing_medium"
+            android:layout_height="@dimen/spacing_medium"
+            android:contentDescription="@string/desc_icon_status_active"
             android:src="@drawable/ic_admin_active_user"
             tools:ignore="ImageContrastCheck" />
 
@@ -31,20 +31,20 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/text_margin_start"
-            android:text="@string/usuario_activo"
-            android:textSize="@dimen/text_size_default" />
+            android:layout_marginStart="@dimen/spacing_small"
+            android:text="@string/user_title"
+            android:textSize="@dimen/text_size_m" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_ver_usuario"
             style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/usuario_ver"
+            android:text="@string/user_view"
             android:textColor="#00695C"
             app:icon="@drawable/ic_admin_visibility_user"
             app:iconGravity="textStart"
-            app:iconTint="@color/verde_azulado_profundo" />
+            app:iconTint="@color/teal_deep" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

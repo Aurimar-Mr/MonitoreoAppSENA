@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- ALERTAS -->
     <style name="TextAppearance.AlertaTitle" parent="TextAppearance.AppCompat.Headline">
-        <item name="android:textSize">@dimen/text_size_xlarge</item>
+        <item name="android:textSize">@dimen/text_size_xxxxxxl</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textStyle">bold</item>
         <item name="fontFamily">@font/montserrat_extrabold</item>
     </style>
     <style name="TextAppearance.AlertaBody" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textSize">@dimen/text_size_m</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="fontFamily">@font/montserrat</item>
     </style>
 
+    <!-- TEXTINPUTS -->
     <style name="Widget.App.TextInputLayout.Green" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">@dimen/margin_medium</item>
+        <item name="android:layout_marginTop">@dimen/spacing_medium</item>
         <item name="boxBackgroundMode">none</item>
         <item name="hintEnabled">false</item>
     </style>
@@ -24,52 +27,39 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/input_height</item>
         <item name="android:background">@drawable/txt_rounded_corner_green</item>
-        <item name="android:textSize">@dimen/text_size_input</item>
-        <item name="android:paddingStart">@dimen/padding_input</item>
-        <item name="android:paddingEnd">@dimen/padding_input</item>
-        <item name="android:drawablePadding">@dimen/drawable_padding</item>
-    </style>
-
-    <style name="TextAppearance.Montserrat.Title" parent="TextAppearance.AppCompat.Headline">
-        <item name="android:textSize">@dimen/text_title_large</item>
-        <item name="android:textColor">@color/turquesa_apagado</item>
-        <item name="android:textStyle">bold</item>
-        <item name="fontFamily">@font/montserrat_extrabold</item>
-    </style>
-
-    <style name="TextAppearance.Montserrat.Body" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:textSize">@dimen/text_body</item>
-        <item name="android:textColor">@color/gray_dark</item>
-        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/text_size_lg</item>
+        <item name="android:paddingStart">@dimen/spacing_medium</item>
+        <item name="android:paddingEnd">@dimen/spacing_medium</item>
+        <item name="android:drawablePadding">@dimen/spacing_sm</item>
     </style>
 
     <style name="Widget.App.TextInputEditText.CustomBackground" parent="">
         <item name="android:background">@drawable/txt_rounded_corner_green</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/text_size_s</item>
-        <item name="android:paddingStart">@dimen/input_padding_start</item>
+        <item name="android:paddingStart">@dimen/spacing_xxlarge_mid</item>
     </style>
 
     <style name="Widget.App.TextInputEditText.CustomBackground.White" parent="">
         <item name="android:background">@drawable/txt_rounded_corner_white</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/text_size_s</item>
-        <item name="android:paddingStart">@dimen/input_padding_start</item>
+        <item name="android:paddingStart">@dimen/spacing_xxlarge_mid</item>
     </style>
 
     <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:layout_marginTop">@dimen/spacing_small</item>
         <item name="hintTextColor">@color/white</item>
         <item name="endIconMode">clear_text</item>
         <item name="startIconDrawable">@drawable/ic_phone_white</item>
         <item name="startIconTint">@color/white</item>
         <item name="boxStrokeColor">@color/white</item>
-        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius</item>
-        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius</item>
-        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius</item>
-        <item name="boxCornerRadiusTopStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/spacing_s</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/spacing_s</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/spacing_s</item>
+        <item name="boxCornerRadiusTopStart">@dimen/spacing_s</item>
     </style>
 
     <style name="Widget.App.TextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
@@ -78,44 +68,44 @@
         <item name="android:inputType">phone</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/text_size_s</item>
-        <item name="android:paddingStart">@dimen/input_padding_start</item>
+        <item name="android:paddingStart">@dimen/spacing_xxlarge_mid</item>
     </style>
 
-
+    <!-- TEXTOS MONTSERRAT -->
+    <style name="TextAppearance.Montserrat.Title" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:textSize">@dimen/text_size_xxxxxxl</item>
+        <item name="android:textColor">@color/teal_deep</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/montserrat_extrabold</item>
+    </style>
+    <style name="TextAppearance.Montserrat.Body" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">@dimen/text_size_m</item>
+        <item name="android:textColor">@color/gray_900</item>
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
     <style name="TextAppearance.Montserrat.Body.White" parent="TextAppearance.Montserrat.Body">
         <item name="android:textColor">@color/white</item>
     </style>
-
-
-
-    <style name="Widget.App.Button.Clear" parent="Widget.MaterialComponents.Button">
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">@dimen/text_button</item>
-        <item name="android:background">@drawable/btn_bg_clear_forgotpass</item>
-        <item name="backgroundTint">@null</item>
-        <item name="cornerRadius">@dimen/corner_radius</item>
-        <item name="android:letterSpacing">0.05</item> </style>
-
     <style name="TextAppearance.Montserrat.WelcomeMessage" parent="TextAppearance.Montserrat.Body">
         <item name="android:textSize">@dimen/text_size_l</item>
         <item name="android:textColor">?attr/colorOnBackground</item>
         <item name="fontFamily">@font/montserrat</item>
         <item name="android:gravity">center</item>
     </style>
-
     <style name="TextAppearance.Montserrat.Title.White" parent="TextAppearance.Montserrat.Title">
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+    <!-- INPUT PASSWORD -->
     <style name="Widget.App.EditText.Password" parent="Widget.App.TextInputEditText.CustomBackground">
         <item name="android:background">@drawable/txt_rounded_corner_green</item>
         <item name="android:drawableStart">@drawable/ic_lock_green</item>
-        <item name="android:drawablePadding">@dimen/drawable_padding</item>
-        <item name="android:paddingStart">@dimen/padding_horizontal</item>
-        <item name="android:paddingEnd">@dimen/padding_horizontal</item>
+        <item name="android:drawablePadding">@dimen/spacing_sm</item>
+        <item name="android:paddingStart">@dimen/spacing_medium</item>
+        <item name="android:paddingEnd">@dimen/spacing_medium</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:textColorHint">@color/gris_medio</item>
-        <item name="android:textSize">@dimen/text_size_input</item>
+        <item name="android:textColorHint">@color/gray_500</item>
+        <item name="android:textSize">@dimen/text_size_lg</item>
         <item name="android:inputType">textPassword</item>
         <item name="android:layout_width">0dp</item>
         <item name="layout_constraintWidth_percent">0.85</item>
@@ -123,20 +113,31 @@
         <item name="layout_constraintEnd_toEndOf">parent</item>
     </style>
 
+    <!-- BOTONES -->
+    <style name="Widget.App.Button.Clear" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_l</item>
+        <item name="android:background">@drawable/btn_bg_clear_forgotpass</item>
+        <item name="backgroundTint">@null</item>
+        <item name="cornerRadius">@dimen/spacing_s</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
     <style name="Widget.App.Button.Primary" parent="Widget.MaterialComponents.Button">
         <item name="android:background">@drawable/btn_border_white_bg_green</item>
         <item name="backgroundTint">@null</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/text_size_button</item>
-        <item name="android:paddingTop">@dimen/button_padding_vertical</item>
-        <item name="android:paddingBottom">@dimen/button_padding_vertical</item>
-        <item name="cornerRadius">@dimen/corner_radius</item>
+        <item name="android:textSize">@dimen/text_size_l</item>
+        <item name="android:paddingTop">@dimen/spacing_s</item>
+        <item name="android:paddingBottom">@dimen/spacing_s</item>
+        <item name="cornerRadius">@dimen/spacing_s</item>
         <item name="android:layout_width">0dp</item>
         <item name="layout_constraintWidth_percent">0.85</item>
         <item name="layout_constraintStart_toStartOf">parent</item>
         <item name="layout_constraintEnd_toEndOf">parent</item>
     </style>
 
+    <!-- CARDS -->
     <style name="CardStyle" parent="Widget.MaterialComponents.CardView">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -145,9 +146,10 @@
         <item name="android:orientation">horizontal</item>
         <item name="android:padding">@dimen/spacing_s</item>
     </style>
+
     <style name="TextAppearance.CardTitle" parent="TextAppearance.AppCompat.Medium">
         <item name="android:fontFamily">@font/montserrat</item>
-        <item name="android:textColor">@color/texto_oscuro</item>
+        <item name="android:textColor">@color/text_secondary</item>
         <item name="android:textSize">@dimen/text_size_l</item>
         <item name="android:gravity">center</item>
     </style>
@@ -162,9 +164,8 @@
 
     <style name="TextAppearance.CardLabel" parent="TextAppearance.AppCompat.Small">
         <item name="android:fontFamily">@font/montserrat</item>
-        <item name="android:textColor">@color/texto_oscuro</item>
+        <item name="android:textColor">@color/text_secondary</item>
         <item name="android:textSize">@dimen/text_size_m</item>
     </style>
-
 
 </resources>

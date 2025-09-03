@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/turquesa_apagado"
+    android:background="@color/teal_deep"
     tools:showIn="navigation_view">
 
     <item android:title="">
@@ -23,15 +23,15 @@
         <item
             android:id="@+id/nav_datos_gas"
             android:icon="@drawable/ic_graph_metano_green"
-            android:title="@string/menu_graph_metano" />
+            android:title="@string/menu_graph_gas" />
         <item
             android:id="@+id/nav_datos_tem"
             android:icon="@drawable/ic_graph_tem_green"
-            android:title="@string/menu_graph_tem" />
+            android:title="@string/menu_graph_temp" />
         <item
             android:id="@+id/nav_datos_presion"
             android:icon="@drawable/ic_graph_presion_green"
-            android:title="@string/menu_graph_presion" />
+            android:title="@string/menu_graph_pressure" />
 
     </group>
 

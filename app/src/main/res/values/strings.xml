@@ -1,132 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- ================= APP ================= -->
     <string name="app_name">SENA Monitoreo</string>
-    <string name="access">Acceder</string>
-    <string name="close">Cerrar</string>
-    <string name="confirm_reset_password">Restablecer</string>
-    <string name="entendido">Entendido</string>
+    <string name="app_title">BMIS</string>
+    <string name="app_control">Control de la aplicación</string>
+
+    <!-- ================= COMÚN ================= -->
+    <string name="common_access">Acceder</string>
+    <string name="common_close">Cerrar</string>
+    <string name="common_ok">Entendido</string>
+    <string name="common_back">Volver</string>
+    <string name="common_exit">Salir</string>
+    <string name="common_active">Activo</string>
+
+    <!-- ================= MENÚ ================= -->
+    <string name="menu_settings">Configuración</string>
     <string name="menu_home">Inicio</string>
     <string name="menu_logout">Cerrar sesión</string>
+    <string name="menu_chart">Gráficas</string>
+    <string name="menu_graph_gas">Datos de gas</string>
+    <string name="menu_graph_temp">Datos de temperatura</string>
+    <string name="menu_graph_pressure">Datos de presión</string>
+    <string name="menu_ai">IA</string>
 
-    <!-- Descripciones para accesibilidad -->
+    <!-- ================= ACCESIBILIDAD ================= -->
+    <!-- Secciones -->
     <string name="desc_header">Encabezado principal de la aplicación</string>
-    <string name="desc_graficas">Sección de gráficas administrativas</string>
-    <string name="desc_ia">Sección de inteligencia artificial</string>
-    <string name="desc_users">Sección de gestión de usuarios</string>
+    <string name="desc_section_graphs">Sección de gráficas administrativas</string>
+    <string name="desc_section_ai">Sección de inteligencia artificial</string>
+    <string name="desc_section_users">Sección de gestión de usuarios</string>
+    <!-- Íconos -->
+    <string name="desc_icon_alert">Icono de alerta</string>
+    <string name="desc_icon_user">Icono de usuario</string>
+    <string name="desc_icon_settings">Icono de configuración</string>
+    <string name="desc_icon_graph">Icono que representa un gráfico de datos</string>
+    <string name="desc_icon_lock">Icono de candado</string>
+    <string name="desc_icon_back">Flecha para volver atrás</string>
+    <string name="desc_icon_status_active">Indicador de estado activo</string>
+    <!-- Imágenes -->
+    <string name="desc_image_background">Imagen de fondo decorativa</string>
+    <string name="desc_image_logo">Logo de la aplicación BMIS</string>
+    <string name="desc_image_plane">Imagen de avión decorativa</string>
+    <string name="desc_image_logo_background">Imagen del logo fondo</string>
+    <!-- Gráficas -->
+    <string name="desc_graph_gas">Gráfica que muestra el nivel de gas metano</string>
+    <string name="desc_graph_temp">Gráfica que muestra la temperatura</string>
+    <string name="desc_graph_pressure">Gráfica que muestra la presión</string>
+    <!-- Otros -->
+    <string name="desc_spinner_tone">Selector del tono de la IA</string>
+    <string name="desc_header_background">Encabezado visual de la app</string>
+    <string name="desc_button_back">Botón para volver atrás</string>
 
-
-    <!-- Login -->
+    <!-- ================= LOGIN ================= -->
     <string name="login_title">Iniciar sesión</string>
-    <string name="email_hint">Correo electrónico</string>
-    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="login_email_hint">Correo electrónico</string>
+    <string name="login_password_hint">Contraseña</string>
+    <string name="login_phone_hint">Número de celular</string>
     <string name="login_button">Ingresar</string>
+    <string name="login_remember_me">Recordarme</string>
+    <string name="login_forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="login_prompt">¿Ya tienes una cuenta?</string>
+    <string name="login_link">Iniciar sesión</string>
 
-    <!-- Registro -->
-    <string name="register_text">¿No tienes cuenta? Regístrate</string>
+    <!-- ================= REGISTRO ================= -->
+    <string name="register_prompt">¿No tienes cuenta? Regístrate</string>
+    <string name="register_new_user">¿Nuevo usuario? Regístrate</string>
+    <string name="register_title">Vamos a crear tu cuenta</string>
+    <string name="register_name_hint">Nombre</string>
+    <string name="register_phone_hint">Número de celular</string>
+    <string name="register_password_hint">Contraseña</string>
+    <string name="register_confirm_password_hint">Confirmar contraseña</string>
+    <string name="register_terms_checkbox">Aceptar</string>
+    <string name="register_terms_conditions">Términos y condiciones</string>
+    <string name="register_button">Registrarse</string>
 
-    <!-- Pantalla principal -->
+    <!-- ================= RESTABLECER CONTRASEÑA ================= -->
+    <string name="forgot_password_title">¿Has olvidado tu contraseña?</string>
+    <string name="forgot_password_instructions">No te preocupes, te enviaremos instrucciones para restablecerla</string>
+    <string name="forgot_password_phone_hint">Ingresa tu teléfono</string>
+    <string name="reset_password">Restablecer contraseña</string>
+    <string name="reset_password_title">Vamos a restablecer la contraseña</string>
+    <string name="reset_password_title_final">Restablecer contraseña</string>
+    <string name="reset_password_new_password">Nueva contraseña</string>
+    <string name="reset_password_confirm_password">Confirmar contraseña</string>
+    <string name="reset_password_button">Establecer nueva contraseña</string>
+    <string name="back_to_login">Volver a inicio de sesión</string>
+
+    <!-- ================= HOME ================= -->
     <string name="home_title">Bienvenido</string>
+    <string name="welcome_message">¡Hola, bienvenido a BMIS!</string>
     <string name="logout_button">Cerrar sesión</string>
 
-    <!-- Errores -->
+    <!-- ================= ERRORES ================= -->
     <string name="error_invalid_email">Correo electrónico inválido</string>
     <string name="error_invalid_password">La contraseña no puede estar vacía</string>
 
-    <string name="bg_image_desc">Imagen de fondo decorativa</string>
-    <string name="logo_image_desc">Logo de la aplicación BMIS</string>
-    <string name="plane_image_desc">Imagen de avión decorativa</string>
-    <string name="alerta_icon_desc">Icono de alerta</string>
-    <string name="desc_icon_user">Icono de usuario</string>
-    <string name="desc_icon_settings">Icono de configuración</string>
-    <string name="desc_header_background">Encabezado</string>
-    <string name="desc_indicador_activo">Indicador de estado activo</string>
-    <string name="desc_icono_grafico">Icono que representa un gráfico de datos</string>
-    <string name="go_back_desc">Botón para volver atrás</string>
-    <string name="lock_icon">Icono de candado</string>
-    <string name="back_arrow">Flecha para volver atrás</string>
+    <!-- ================= SENSORES ================= -->
+    <string name="sensor_readings_realtime">Lecturas en tiempo real</string>
+    <string name="sensor_waiting_data">Esperando datos del sensor…</string>
+    <string name="sensor_status_gas">Estado del sensor de gas</string>
+    <string name="sensor_status_temp">Estado del sensor de temperatura</string>
+    <string name="sensor_status_pressure">Estado del sensor de presión</string>
+    <string name="sensor_name_gas">Nivel de metano</string>
+    <string name="sensor_name_temp">Temperatura</string>
+    <string name="sensor_name_pressure">Presión</string>
+    <string name="sensor_alert">¡Alerta!</string>
+    <string name="placeholder_icon_gas">Icono para la gráfica de nivel de metano</string>
+    <string name="placeholder_icon_temp">Icono para la gráfica de temperatura</string>
+    <string name="placeholder_icon_pressure">Icono para la gráfica de presión</string>
 
-    <string name="bmis_title">BMIS</string>
-    <string name="control_app">Control de la aplicación</string>
-    <string name="phone_hint">Celular</string>
-    <string name="password_hint">Contraseña</string>
-    <string name="remember_me">Recordarme</string>
-    <string name="forget_password">¿Olvidaste tu contraseña?</string>
-    <string name="new_user_signup">¿Nuevo usuario? Regístrate</string>
-    <string name="login_link">Iniciar sesión</string>
-    <string name="login_prompt">¿Ya tienes una cuenta?</string>
 
-    <string name="create_account_title">Vamos a crear tu cuenta</string>
-    <string name="hint_name">Nombre</string>
-    <string name="numero_de_celular">Número de celular</string>
-    <string name="contrasena">Contraseña</string>
-    <string name="confirmar_contrasena">Vuelve a escribir tu contraseña</string>
-    <string name="accept_terms_checkbox">Aceptar</string>
-    <string name="terms_and_conditions">Términos y condiciones</string>
-    <string name="register_button">Registrarse</string>
-
-    <string name="forgot_password_title">¿Has olvidado tu contraseña?</string>
-    <string name="forgot_password_instructions">No te preocupes, te enviaremos instrucciones para restablecerla</string>
-    <string name="hint_phone_forgot">Ingresa tu teléfono</string>
-    <string name="reset_password">Restablecer contraseña</string>
-    <string name="back_to_login">Volver a inicio de sesión</string>
-    <string name="reset_password_title">Vamos a restablecer la contraseña</string>
-    <string name="hint_new_password">Nueva contraseña</string>
-    <string name="hint_confirm_password">Confirmar contraseña</string>
-    <string name="set_new_password">Establecer nueva contraseña</string>
-
-    <string name="welcome_message">¡Hola, bienvenido a BMIS!</string>
-    <string name="alerta">¡Alerta!</string>
-    <string name="lecturas_en_tiempo_real">Lecturas en tiempo real</string>
-    <string name="esperando_datos_del_sensor">Esperando datos del sensor…</string>
-    <string name="estado_del_sensor_mq_4">Estado del sensor de gas</string>
-    <string name="estado_del_sensor_de_temperatura">Estado del sensor de temperatura</string>
-    <string name="estado_del_sensor_de_presion">Estado del sensor de presión</string>
-    <string name="activo">Activo</string>
-
+    <!-- ================= USUARIOS ================= -->
     <string name="admin_title">Administrador</string>
     <string name="user_title">Usuario</string>
-    <string name="seccion_usuarios_titulo">Usuarios</string>
-    <string name="tab_activos">Usuarios activos</string>
-    <string name="tab_bloqueados">Usuarios bloqueados</string>
-    <string name="tab_todos">Todos los usuarios</string>
-    <string name="nombre_usuario">Nombre de usuario</string>
-    <string name="usuario_activo">Usuario activo</string>
-    <string name="usuario_ver">Ver</string>
-    <string name="bloquear_usuario">Bloquear usuario</string>
+    <string name="users_section_title">Usuarios</string>
+    <string name="users_tab_active">Usuarios activos</string>
+    <string name="users_tab_blocked">Usuarios bloqueados</string>
+    <string name="users_tab_all">Todos los usuarios</string>
+    <string name="user_name">Nombre de usuario</string>
+    <string name="user_active">Usuario activo</string>
+    <string name="user_view">Ver</string>
+    <string name="user_block">Bloquear usuario</string>
 
-    <string name="seccion_graficas_titulo">Gráficas</string>
-    <string name="menu_chart">Gráficas</string>
-    <string name="menu_graph_metano">Datos de gas</string>
-    <string name="menu_graph_tem">Datos de temperatura</string>
-    <string name="menu_graph_presion">Datos de presión</string>
-    <string name="nombre_sensor_gas">Nivel de metano</string>
-    <string name="nombre_sensor_temp">Temperatura</string>
-    <string name="nombre_sensor_presion">Presión</string>
-    <string name="placeholder_desc_gas">Icono para la gráfica de nivel de metano</string>
-    <string name="placeholder_desc_temp">Icono para la gráfica de temperatura</string>
-    <string name="placeholder_desc_presion">Icono para la gráfica de presión</string>
-    <string name="desc_graph_gas">Gráfica que muestra el nivel de gas metano</string>
-    <string name="desc_graph_temp">Gráfica que muestra la temperatura ambiente</string>
-    <string name="desc_graph_presion">Gráfica que muestra la presión atmosférica</string>
+    <!-- ================= GRÁFICAS ================= -->
+    <string name="graphs_section_title">Gráficas</string>
 
-    <string name="menu_volumen">IA</string>
-    <string name="seccion_ia_titulo">Voz de la IA</string>
-    <string name="ia_activar_desactivar">Activar / Desactivar</string>
-    <string name="ia_volumen">Volumen</string>
-    <string name="ia_volumen_valor">50%</string>
-    <string name="ia_elegir_voz">Elegir voz</string>
-    <string name="ia_elegir_tono">Elegir tono</string>
-    <string name="activar_lectura_de_voz">Activar lectura de voz</string>
-    <string name="message">Ententido</string>
-    <string name="lock_icon_desc">Icono de un candado</string>
-    <string name="n_mero_de_celular">Número de celular</string>
-    <string name="reset_password_title_final">Restablecer contraseña</string>
-    <string name="new_password">Nueva contraseña</string>
-    <string name="confirm_new_password">Confirmar contraseña</string>
-    <string name="contrase_a">Contraseña</string>
-    <string name="vuelve_a_escribir_tu_contrase_a">Confirmar contraseña</string>
-    <string name="cerrar">Botón salir</string>
-    <string name="desc_img">Imagen del logo fondo</string>
-    <string name="desc_spinner_tono">Seleccion del tono de la ia</string>
-
+    <!-- ================= INTELIGENCIA ARTIFICIAL ================= -->
+    <string name="ai_section_title">Voz de la IA</string>
+    <string name="ai_toggle">Activar / Desactivar</string>
+    <string name="ai_volume">Volumen</string>
+    <string name="ai_volume_value">50%</string>
+    <string name="ai_choose_voice">Elegir voz</string>
+    <string name="ai_choose_tone">Elegir tono</string>
+    <string name="ai_enable_voice_reading">Activar lectura de voz</string>
 </resources>

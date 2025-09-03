@@ -1,31 +1,31 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.SENAMonitoreo" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+
+    <!-- Base application theme -->
+    <style name="Base.Theme.SENAMonitoreo" parent="Theme.Material3.DayNight.NoActionBar" />
 
     <style name="Theme.SENAMonitoreo" parent="Base.Theme.SENAMonitoreo" />
 
     <style name="Theme.YourAppName" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/primary_background</item>
+        <item name="colorPrimary">@color/background_primary</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorAccent">@color/accent_gold</item>
-        <item name="android:statusBarColor">@color/primary_background</item>
+        <item name="colorAccent">@color/gold</item>
+        <item name="android:statusBarColor">@color/background_primary</item>
     </style>
 
+    <!-- TEXTS -->
     <style name="TextAppearance.App.Title" parent="TextAppearance.AppCompat.Title">
         <item name="android:fontFamily">@font/montserrat_extrabold</item>
-        <item name="android:textColor">@color/accent_gold</item>
-        <item name="android:textSize">@dimen/text_size_xlarge</item>
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:textSize">@dimen/text_size_xxxxxxl</item>
         <item name="android:textAlignment">center</item>
     </style>
 
     <style name="TextAppearance.App.Link" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textSize">@dimen/text_size_m</item>
     </style>
 
+    <!-- INPUTS OUTLINED -->
     <style name="Widget.App.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="hintTextColor">@color/white</item>
         <item name="boxStrokeColor">@color/white</item>
@@ -33,24 +33,27 @@
     </style>
 
     <style name="Widget.App.TextInputLayout.OutlinedBox.Green" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="hintTextColor">@color/text_hint_color</item>
-        <item name="boxStrokeColor">@color/icon_green</item>
-        <item name="startIconTint">@color/icon_green</item>
+        <item name="hintTextColor">@color/gray_500</item>
+        <item name="boxStrokeColor">@color/green_icon</item>
+        <item name="startIconTint">@color/green_icon</item>
     </style>
 
+    <!-- BUTTON -->
     <style name="Widget.App.Button.Filled" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/btn_border_white_bg_green</item>
         <item name="android:elevation">8dp</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/text_size_large</item>
-        <item name="android:paddingTop">@dimen/button_padding_vertical</item>
-        <item name="android:paddingBottom">@dimen/button_padding_vertical</item>
+        <item name="android:textSize">@dimen/text_size_l</item>
+        <item name="android:paddingTop">@dimen/spacing_s</item>
+        <item name="android:paddingBottom">@dimen/spacing_s</item>
     </style>
 
+    <!-- SUBTITLE -->
     <style name="TextAppearance.App.Subtitle" parent="TextAppearance.MaterialComponents.Body1">
         <item name="android:fontFamily">@font/montserrat</item>
-        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textSize">@dimen/text_size_l</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textAlignment">center</item>
     </style>
+
 </resources>

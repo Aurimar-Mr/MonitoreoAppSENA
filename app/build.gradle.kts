@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -5,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.sena.monitoreo"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.sena.monitoreo"
