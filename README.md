@@ -18,3 +18,42 @@ com.tuproyecto.bmis.ui
 
 .common: Puedes crear este paquete para las Activities o Fragments que son compartidos en los menús laterales o en otras partes de la app.
     -SidebarMenuFragment.kt: Un Fragmento que puede ser reutilizado en las pantallas principales tanto de usuario como de administrador, solo mostrando u ocultando ciertos elementos según el rol.
+
+com.sena.monitoreo/
+│
+├── ui/                      # Interfaz gráfica (Activities, Fragments)
+│   ├── admin/               # Pantallas exclusivas del administrador
+│   │   ├── AdminDashboardActivity.kt   # Panel con gráficas y gestión de usuarios
+│   │   └── HomeAdminActivity.kt        # Inicio del administrador
+│   │
+│   ├── auth/                # Autenticación y seguridad
+│   │   ├── LoginActivity.kt           # Login con email/celular + contraseña
+│   │   ├── SignupActivity.kt          # Registro de nuevos usuarios
+│   │   ├── ForgotPasswordActivity.kt  # Recuperar acceso
+│   │   └── ResetPasswordActivity.kt   # Restablecer contraseña
+│   │
+│   └── user/                # Pantallas del usuario normal
+│       ├── HomeUserActivity.kt        # Dashboard principal
+│       ├── SensorDataActivity.kt      # Gráficas de temperatura, pH, biogás
+│       └── AlertsActivity.kt          # Alertas y recomendaciones IA
+│
+├── data/                    # Comunicación con backend y datos locales
+│   ├── api/                 
+│   │   ├── ApiService.kt    # Definición de endpoints (Retrofit: /login, /lecturas, /predict)
+│   │   └── RetrofitClient.kt# Configuración de Retrofit (con URL del backend)
+│   │
+│   ├── model/               # Clases que representan la información que viene del backend
+│   │   ├── Usuario.kt       # id, correo, rol
+│   │   ├── Lectura.kt       # id, sensor, valor, timestamp
+│   │   └── Prediccion.kt    # estado, probabilidad, recomendación
+│   │
+│   └── repository/          # Capa intermedia entre UI y API
+│       ├── UserRepository.kt    # Login, registro, gestión de usuarios
+│       └── SensorRepository.kt  # Peticiones de datos de sensores y predicciones IA
+│
+├── utils/                   # Utilidades
+│   ├── SessionManager.kt    # Manejo de sesión y token del usuario
+│   └── Extensions.kt        # Funciones extra reutilizables
+│
+└── App.kt                   # Clase Application (inicializa config global)
+
