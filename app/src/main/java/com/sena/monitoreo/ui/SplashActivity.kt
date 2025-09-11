@@ -11,36 +11,17 @@ import com.sena.monitoreo.ui.user.HomeUserActivity
 
 class SplashActivity : AppCompatActivity() {
 
-    // Define the delay time for the splash screen
-    private val SPLASH_TIME_OUT: Long = 4000 // 4 seconds
+    private val SPLASH_TIME_OUT: Long = 4000 // 4 segundos
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Get SharedPreferences to check if it's the first time the app is launched
-        val sharedPref = getSharedPreferences("app_status", MODE_PRIVATE)
-        val isFirstTime = sharedPref.getBoolean("is_first_time", true)
-
-        if (isFirstTime) {
-            // If it's the first time, show the splash screen with a delay
-            Handler(Looper.getMainLooper()).postDelayed({
-                // Navigate to the user's main screen (HomeUserActivity) after the delay
-                val intent = Intent(this, HomeUserActivity::class.java)
-                startActivity(intent)
-                finish() // Close the splash activity
-            }, SPLASH_TIME_OUT)
-
-            // Update the flag so the splash screen won't show on subsequent launches
-            with(sharedPref.edit()) {
-                putBoolean("is_first_time", false)
-                apply()
-            }
-        } else {
-            // If it's not the first time, navigate directly to the login screen
+        // Mostrar splash y luego abrir LoginActivity
+        Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
-        }
+        }, SPLASH_TIME_OUT)
     }
 }

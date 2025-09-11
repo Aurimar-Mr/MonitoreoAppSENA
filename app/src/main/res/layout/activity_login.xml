@@ -144,6 +144,18 @@
                 tools:ignore="VisualLintTextFieldSize" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- TextView para errores -->
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/input_layout_password"
+            app:layout_constraintStart_toStartOf="@id/input_layout_password"
+            app:layout_constraintEnd_toEndOf="@id/input_layout_password"/>
+
         <!-- Remember me y Forgot password -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/remember_forgot_container"
@@ -152,7 +164,7 @@
             android:layout_marginTop="@dimen/spacing_small"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/input_layout_password"
+            app:layout_constraintTop_toBottomOf="@id/tvError"
             app:layout_constraintWidth_percent="0.85">
 
             <CheckBox
