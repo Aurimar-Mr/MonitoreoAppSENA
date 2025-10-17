@@ -8,7 +8,6 @@
     android:layout_height="wrap_content"
     android:paddingBottom="@dimen/spacing_medium">
 
-    <!-- Imagen decorativa, excluida de accesibilidad -->
     <ImageView
         android:id="@+id/header_background_image"
         android:layout_width="0dp"
@@ -23,6 +22,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ImageContrastCheck" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/voice_wave_animation"
+        android:layout_width="318dp"
+        android:layout_height="69dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ondas_de_voz" />
 
     <ImageView
         android:id="@+id/menu_icon"

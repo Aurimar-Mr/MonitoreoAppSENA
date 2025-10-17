@@ -28,7 +28,7 @@ class SensorDataActivity : AppCompatActivity() {
     private val repository = SensorRepository()
     private val TAG = "SensorDataActivity"
     private val maxDatos = 7
-    private val refreshTime = 5 * 60 * 1000L // 5 minutos en milisegundos
+    private val refreshTime = 5 * 60 * 1000L
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,18 +36,6 @@ class SensorDataActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivitySensorDataBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val visualizer = findViewById<LineBarVisualizer>(R.id.voiceVisualizer)
-        visualizer.setColor(ContextCompat.getColor(this, R.color.black_500))
-        visualizer.setDensity(70)
-        visualizer.setPlayer(0) // 0 = salida de audio global del sistema
-
-        override fun onPause() {
-            super.onPause()
-            val visualizer = findViewById<LineBarVisualizer>(R.id.voiceVisualizer)
-            visualizer.release()
-        }
-
         // Lanza la actualización periódica
         lifecycleScope.launch {
             while (true) {

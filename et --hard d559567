@@ -1,0 +1,17 @@
+[33md559567[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmonitoreoApp[m[33m, [m[1;31morigin/monitoreoApp[m[33m)[m coloque el modulo de  voz en los layout
+[33m3a6a927[m cree una rama
+[33m178a95c[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Actualización del módulo de usuario: visualizador de voz, ajustes XML y gradle
+[33mde5b4df[m From this point, we establish the secure baseline where the core setup begins. All upcoming functionalities will be built on top of this stage. If any error occurs later, this is the reference point we must return to.
+[33m2a1f847[m Creacion de la parte de peticiones de la app hacia el servidor completadao el login creacion de cuenta falto completar lo de la ia
+[33mdade264[m guardar cambios
+[33m628200c[m Add jerarquia de packages a readme
+[33m19ca781[m feat(UI): Refactor de layouts para corregir errores de malas practicas
+[33mdc756bd[m refactor: Iniciando proceso de refactorización
+[33me38204d[m finisg of screen ui (responsibe and accesibility)
+[33m8ff6b90[m Completed all UI screens, ensuring responsiveness and accessibility.
+[33m89d3e98[m to do res´ponsive a good pratice the ui
+[33mb0e95cd[m feat: Add UI for User and Admin panels, and initial navigation menu
+[33m73d2f6d[m feat(UI): Finalize Reset Password screen UI and enhance responsiveness
+[33mdefb3e6[m structura of the package of ui README.md
+[33mf823754[m fix(UI): Improve accessibility and responsiveness of auth screens
+[33m19814db[m first commit

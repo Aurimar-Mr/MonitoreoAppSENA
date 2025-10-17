@@ -11,13 +11,13 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-// settings.gradle.kts
 dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
-        mavenCentral() // ¡Asegúrate de que esta línea esté presente!
-        // Agrega el repositorio de JitPack aquí
-        maven(url = "https://jitpack.io")
+        mavenCentral()
+        // FIX: The Kotlin DSL syntax for the JitPack URL
+        maven { url = uri("https://jitpack.io") }
     }
 }
 

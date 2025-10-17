@@ -51,8 +51,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.lottie)
     implementation(libs.mpchart)
-    implementation("com.github.elevenetc:audio-visualizer:1.0.0")
-    implementation("com.github.Chesire:WaveformView:2.1.1")
+    implementation("com.airbnb.android:lottie:6.0.0")
     // Kotlin
     implementation(libs.kotlin.stdlib)
     implementation(libs.coroutines.core)
