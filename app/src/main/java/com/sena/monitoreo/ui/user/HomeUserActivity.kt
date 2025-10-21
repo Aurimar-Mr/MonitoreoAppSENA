@@ -1,79 +1,61 @@
 package com.sena.monitoreo.ui.user
 
-import android.content.Intent
-import android.os.Bundle
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.GravityCompat
-import androidx.lifecycle.lifecycleScope
-import com.sena.monitoreo.R
-import com.sena.monitoreo.databinding.ActivityHomeUserBinding
-import com.sena.monitoreo.ui.auth.LoginActivity
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import android.os.Bundle
+import android.util.Log
+import com.sena.monitoreo.databinding.HeaderLayoutUserBinding
+import com.sena.monitoreo.utils.TtsManager
+import com.sena.monitoreo.utils.TtsOnInitCallback
+import com.sena.monitoreo.utils.TtsPlaybackListener
+import com.sena.monitoreo.utils.TtsManager.Companion.UTTERANCE_ID_GENERAL
 
-class HomeUserActivity : AppCompatActivity() {
+class HomeUserActivity : AppCompatActivity(), TtsOnInitCallback, TtsPlaybackListener {
 
-    private lateinit var binding: ActivityHomeUserBinding
-    private val SPLASH_TIME_OUT: Long = 2000 // 3 segundos
+    private lateinit var binding: HeaderLayoutUserBinding
+    private var ttsManager: TtsManager? = null
+    private val TAG = "HomeUserActivity"
+    private fun getUserNameFromDatabase(): String {
+        return "Andrea López"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        binding = ActivityHomeUserBinding.inflate(layoutInflater)
+
+        binding = HeaderLayoutUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Verificamos si viene desde el menú o desde launcher
-        val fromMenu = intent.getBooleanExtra("FROM_MENU", false)
+        ttsManager = TtsManager(this, this)
+        ttsManager?.playbackListener = this
+        binding.voiceWaveAnimation.pauseAnimation()
+    }
 
-        if (!fromMenu) {
-            // 👇 Solo aplica splash si vienes desde el launcher
-            lifecycleScope.launch {
-                delay(SPLASH_TIME_OUT)
-                val intent = Intent(this@HomeUserActivity, SensorDataActivity::class.java)
-                startActivity(intent)
-                finish() // cerramos el splash
-            }
+    override fun onTtsInitialized(success: Boolean) {
+        if (success) {
+            val userName = getUserNameFromDatabase()
+            val welcomeMessage = "Bienvenido $userName. Su sistema de monitoreo está listo."
+            ttsManager?.speak(welcomeMessage, 1.0f, 1.0f)
+        } else {
+            Log.e(TAG, "TTS no se pudo inicializar.")
         }
+    }
 
-        // --- Menú lateral ---
-        binding.mainHeaderUser.menuIcon.setOnClickListener {
-            binding.drawerLayout.openDrawer(GravityCompat.START)
-        }
+    override fun onStartSpeaking() {
+        Log.i(TAG, "TTS ha empezado a hablar.")
+        binding.voiceWaveAnimation.resumeAnimation()
+    }
 
-        binding.navView.setNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_datos_gas -> {
-                    val intent = Intent(this, SensorDataActivity::class.java)
-                    intent.putExtra("SCROLL_TO", "gas")
-                    startActivity(intent)
-                }
-                R.id.nav_datos_tem -> {
-                    val intent = Intent(this, SensorDataActivity::class.java)
-                    intent.putExtra("SCROLL_TO", "temp")
-                    startActivity(intent)
-                }
-                R.id.nav_datos_presion -> {
-                    val intent = Intent(this, SensorDataActivity::class.java)
-                    intent.putExtra("SCROLL_TO", "pressure")
-                    startActivity(intent)
-                }
-                else -> {
-                    // Limpia los datos de sesión si los guardas en SharedPreferences
-                    val prefs = getSharedPreferences("app_prefs", MODE_PRIVATE)
-                    prefs.edit().clear().apply()
+    override fun onDoneSpeaking() {
+        Log.i(TAG, "TTS ha terminado de hablar.")
+        binding.voiceWaveAnimation.pauseAnimation()
+    }
 
-                    // Ir al LoginActivity y limpiar el back stack
-                    val intent = Intent(this, LoginActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
+    override fun onSpeechError(utteranceId: String) {
+        Log.e(TAG, "Error de voz para ID: $utteranceId")
+        binding.voiceWaveAnimation.pauseAnimation()
+    }
 
-                    Toast.makeText(this, "Sesión cerrada", Toast.LENGTH_SHORT).show()
-                }
-            }
-            binding.drawerLayout.closeDrawer(GravityCompat.START)
-            true
-        }
+    override fun onDestroy() {
+        ttsManager?.shutdown()
+        super.onDestroy()
     }
 }

@@ -7,6 +7,7 @@ import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.sena.monitoreo.R
 import com.sena.monitoreo.ui.auth.LoginActivity
+import com.sena.monitoreo.ui.admin.HomeAdminActivity
 import com.sena.monitoreo.ui.user.HomeUserActivity
 
 class SplashActivity : AppCompatActivity() {

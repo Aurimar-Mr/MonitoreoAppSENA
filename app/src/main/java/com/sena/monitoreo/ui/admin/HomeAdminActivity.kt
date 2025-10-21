@@ -1,42 +1,69 @@
-package com.sena.monitoreo.utils
+package com.sena.monitoreo.ui.admin
 
-import android.content.Context
-import android.speech.tts.TextToSpeech
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import android.util.Log
-import java.util.Locale
+import com.sena.monitoreo.databinding.HeaderLayoutAdminBinding
+import com.sena.monitoreo.utils.TtsManager
+import com.sena.monitoreo.utils.TtsOnInitCallback
+import com.sena.monitoreo.utils.TtsPlaybackListener
+import com.sena.monitoreo.utils.TtsManager.Companion.UTTERANCE_ID_GENERAL
 
-// Debe implementar TextToSpeech.OnInitListener
-class TtsManager(
-    private val context: Context,
-    private val initCallback: TtsOnInitCallback // Aquí usa la interfaz
-) : TextToSpeech.OnInitListener {
+class HomeAdminActivity : AppCompatActivity(), TtsOnInitCallback, TtsPlaybackListener {
 
-    private var tts: TextToSpeech? = null
-    var playbackListener: TtsPlaybackListener? = null // Aquí está 'playbackListener'
+    private lateinit var binding: HeaderLayoutAdminBinding
+    private var ttsManager: TtsManager? = null
+    private val TAG = "HeaderLayoutAdminActivity"
 
-    init {
-        tts = TextToSpeech(context, this)
+    private fun getAdminNameFromDatabase(): String {
+        return "Javier Pérez" // ⚠️ Reemplazar con lógica real
     }
 
-    override fun onInit(status: Int) {
-        if (status == TextToSpeech.SUCCESS) {
-            val result = tts?.setLanguage(Locale("es", "ES"))
-            // ... (Lógica de inicialización)
-            initCallback.onTtsInitialized(true)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        binding = HeaderLayoutAdminBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        ttsManager = TtsManager(this, this)
+        ttsManager?.playbackListener = this
+
+        // 1. ANIMACIÓN: Usamos el nombre camelCase que debe funcionar.
+        binding.voiceWaveAnimation.pauseAnimation()
+    }
+
+    override fun onDestroy() {
+        ttsManager?.shutdown()
+        super.onDestroy()
+    }
+
+    override fun onTtsInitialized(success: Boolean) {
+        if (success) {
+            val adminName = getAdminNameFromDatabase()
+            val greeting = "Sistema B.M.I.S. en modo administrador. Hola, $adminName."
+
+            ttsManager?.speak(
+                text = greeting,
+                pitch = 1.0f,
+                speed = 1.0f,
+                utteranceId = UTTERANCE_ID_GENERAL
+            )
         } else {
-            // ... (Lógica de error)
-            initCallback.onTtsInitialized(false)
+            Log.e(TAG, "El saludo por voz no se pudo reproducir. TTS Fallido.")
         }
     }
-
-    // El método 'speak'
-    fun speak(text: String, pitch: Float, speed: Float) {
-        // ... (Lógica de speak)
+    override fun onStartSpeaking() {
+        binding.voiceWaveAnimation.playAnimation()
     }
 
-    // El método 'shutdown'
-    fun shutdown() {
-        tts?.stop()
-        tts?.shutdown()
+    // Coincide con fun onDoneSpeaking() de la interfaz.
+    override fun onDoneSpeaking() {
+        binding.voiceWaveAnimation.pauseAnimation()
+    }
+
+    // Coincide con fun onSpeechError(utteranceId: String) de la interfaz.
+    override fun onSpeechError(utteranceId: String) {
+        binding.voiceWaveAnimation.pauseAnimation()
+        Log.e(TAG, "Error en reproducción TTS para ID: $utteranceId")
     }
 }
