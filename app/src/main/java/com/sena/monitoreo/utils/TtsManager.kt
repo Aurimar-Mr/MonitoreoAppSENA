@@ -1,14 +1,13 @@
 package com.sena.monitoreo.utils
 
-import android.content.Context
 import android.os.Build
 import android.os.Bundle
-import android.speech.TextToSpeech
-import android.speech.UtteranceProgressListener
 import android.util.Log
+import android.content.Context
+import android.speech.tts.TextToSpeech
+import android.speech.tts.UtteranceProgressListener
 import java.util.Locale
 
-// NOTA: TtsOnInitCallback y TtsPlaybackListener se asume que están en otro archivo llamado TtsCallbacks.kt
 
 class TtsManager(
     private val context: Context,
